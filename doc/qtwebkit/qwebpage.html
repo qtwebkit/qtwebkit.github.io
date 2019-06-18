@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qwebpage.cpp -->
+  <title>QWebPage Class | Qt 5.212.0 </title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li>Qt 5.212.0</li>
+<li>QWebPage</li>
+<li id="buildversion">Qt 5.212.0 Reference Documentation</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#related-non-members">Related Non-Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#using-qwebpage-in-a-widget-less-environment">Using QWebPage in a Widget-less Environment</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QWebPage Class</h1>
+<!-- $$$QWebPage-brief -->
+<p>The <a href="qwebpage.html">QWebPage</a> class provides an object to view and edit web documents. <a href="#details">More...</a></p>
+<!-- @@@QWebPage -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;QWebPage&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += webkitwidgets</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 4.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> </td></tr></table></div><ul>
+<li><a href="qwebpage-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-choosemultiplefilesextensionoption.html">ChooseMultipleFilesExtensionOption</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-choosemultiplefilesextensionreturn.html">ChooseMultipleFilesExtensionReturn</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-errorpageextensionoption.html">ErrorPageExtensionOption</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-errorpageextensionreturn.html">ErrorPageExtensionReturn</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-extensionoption.html">ExtensionOption</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-extensionreturn.html">ExtensionReturn</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qwebpage-viewportattributes.html">ViewportAttributes</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#ErrorDomain-enum">ErrorDomain</a></b> { QtNetwork, Http, WebKit }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#Extension-enum">Extension</a></b> { ChooseMultipleFilesExtension, ErrorPageExtension }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#Feature-enum">Feature</a></b> { Notifications, Geolocation }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#FindFlag-enum">FindFlag</a></b> { FindBackward, FindCaseSensitively, FindWrapsAroundDocument, HighlightAllOccurrences, ..., FindBeginsInSelection }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#FindFlag-enum">FindFlags</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#LinkDelegationPolicy-enum">LinkDelegationPolicy</a></b> { DontDelegateLinks, DelegateExternalLinks, DelegateAllLinks }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#MessageLevel-enum">MessageLevel</a></b> { LogMessageLevel, WarningMessageLevel, ErrorMessageLevel, DebugMessageLevel, InfoMessageLevel }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#MessageSource-enum">MessageSource</a></b> { XmlMessageSource, JSMessageSource, NetworkMessageSource, ConsoleAPIMessageSource, ..., OtherMessageSource }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#NavigationType-enum">NavigationType</a></b> { NavigationTypeLinkClicked, NavigationTypeFormSubmitted, NavigationTypeBackOrForward, NavigationTypeReload, NavigationTypeFormResubmitted, NavigationTypeOther }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#PermissionPolicy-enum">PermissionPolicy</a></b> { PermissionUnknown, PermissionGrantedByUser, PermissionDeniedByUser }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#VisibilityState-enum">VisibilityState</a></b> { VisibilityStateVisible, VisibilityStateHidden, VisibilityStatePrerender, VisibilityStateUnloaded }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#WebAction-enum">WebAction</a></b> { NoWebAction, OpenLink, OpenLinkInNewWindow, OpenLinkInThisWindow, ..., Unselect }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#WebWindowType-enum">WebWindowType</a></b> { WebBrowserWindow, WebModalDialog }</td></tr>
+</table></div>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="qwebpage.html#contentEditable-prop">contentEditable</a></b> : bool</li>
+<li class="fn"><b><a href="qwebpage.html#forwardUnsupportedContent-prop">forwardUnsupportedContent</a></b> : bool</li>
+<li class="fn"><b><a href="qwebpage.html#hasSelection-prop">hasSelection</a></b> : const bool</li>
+<li class="fn"><b><a href="qwebpage.html#linkDelegationPolicy-prop">linkDelegationPolicy</a></b> : LinkDelegationPolicy</li>
+<li class="fn"><b><a href="qwebpage.html#modified-prop">modified</a></b> : const bool</li>
+<li class="fn"><b><a href="qwebpage.html#palette-prop">palette</a></b> : QPalette</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="qwebpage.html#preferredContentsSize-prop">preferredContentsSize</a></b> : QSize</li>
+<li class="fn"><b><a href="qwebpage.html#recentlyAudible-prop">recentlyAudible</a></b> : const bool</li>
+<li class="fn"><b><a href="qwebpage.html#selectedHtml-prop">selectedHtml</a></b> : const QString</li>
+<li class="fn"><b><a href="qwebpage.html#selectedText-prop">selectedText</a></b> : const QString</li>
+<li class="fn"><b><a href="qwebpage.html#viewportSize-prop">viewportSize</a></b> : QSize</li>
+<li class="fn"><b><a href="qwebpage.html#visibilityState-prop">visibilityState</a></b> : VisibilityState</li>
+</ul>
+</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#QWebPage">QWebPage</a></b>(QObject *<i> parent</i> = Q_NULLPTR)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#dtor.QWebPage">~QWebPage</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#action">action</a></b>(WebAction<i> action</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#bytesReceived">bytesReceived</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QMenu * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#createStandardContextMenu">createStandardContextMenu</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebFrame * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#currentFrame">currentFrame</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#customAction">customAction</a></b>(int<i> action</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> qreal </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#devicePixelRatio">devicePixelRatio</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#event">event</a></b>(QEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#extension">extension</a></b>(Extension<i> extension</i>, const ExtensionOption *<i> option</i> = Q_NULLPTR, ExtensionReturn *<i> output</i> = Q_NULLPTR)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#findText">findText</a></b>(const QString &amp;<i> subString</i>, FindFlags<i> options</i> = FindFlags())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#focusNextPrevChild">focusNextPrevChild</a></b>(bool<i> next</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#forwardUnsupportedContent-prop">forwardUnsupportedContent</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebFrame * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#frameAt">frameAt</a></b>(const QPoint &amp;<i> pos</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#hasSelection-prop">hasSelection</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebHistory * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#history">history</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#inputMethodQuery">inputMethodQuery</a></b>(Qt::InputMethodQuery<i> property</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#contentEditable-prop">isContentEditable</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#modified-prop">isModified</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> LinkDelegationPolicy </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#linkDelegationPolicy-prop">linkDelegationPolicy</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebFrame * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#mainFrame">mainFrame</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QNetworkAccessManager * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#networkAccessManager">networkAccessManager</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPalette </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#palette-prop">palette</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebPluginFactory * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#pluginFactory">pluginFactory</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#preferredContentsSize-prop">preferredContentsSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#recentlyAudible-prop">recentlyAudible</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#resetDevicePixelRatio">resetDevicePixelRatio</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#selectedHtml-prop">selectedHtml</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#selectedText-prop">selectedText</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#setActualVisibleContentRect">setActualVisibleContentRect</a></b>(const QRect &amp;<i> rect</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#contentEditable-prop">setContentEditable</a></b>(bool<i> editable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#setDevicePixelRatio">setDevicePixelRatio</a></b>(qreal<i> ratio</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#setFeaturePermission">setFeaturePermission</a></b>(QWebFrame *<i> frame</i>, Feature<i> feature</i>, PermissionPolicy<i> policy</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#forwardUnsupportedContent-prop">setForwardUnsupportedContent</a></b>(bool<i> forward</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#linkDelegationPolicy-prop">setLinkDelegationPolicy</a></b>(LinkDelegationPolicy<i> policy</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#setNetworkAccessManager">setNetworkAccessManager</a></b>(QNetworkAccessManager *<i> manager</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#palette-prop">setPalette</a></b>(const QPalette &amp;<i> palette</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#setPluginFactory">setPluginFactory</a></b>(QWebPluginFactory *<i> factory</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#preferredContentsSize-prop">setPreferredContentsSize</a></b>(const QSize &amp;<i> size</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#setView">setView</a></b>(QWidget *<i> view</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#viewportSize-prop">setViewportSize</a></b>(const QSize &amp;<i> size</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#visibilityState-prop">setVisibilityState</a></b>(VisibilityState)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebSettings * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#settings">settings</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#shouldInterruptJavaScript">shouldInterruptJavaScript</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#supportedContentTypes">supportedContentTypes</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#supportsContentType">supportsContentType</a></b>(const QString &amp;<i> mimeType</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#supportsExtension">supportsExtension</a></b>(Extension<i> extension</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#swallowContextMenuEvent">swallowContextMenuEvent</a></b>(QContextMenuEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#totalBytes">totalBytes</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#triggerAction">triggerAction</a></b>(WebAction<i> action</i>, bool<i> checked</i> = false)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUndoStack * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#undoStack">undoStack</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#updatePositionDependentActions">updatePositionDependentActions</a></b>(const QPoint &amp;<i> pos</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWidget * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#view">view</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ViewportAttributes </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#viewportAttributesForSize">viewportAttributesForSize</a></b>(const QSize &amp;<i> availableSize</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#viewportSize-prop">viewportSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VisibilityState </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#visibilityState-prop">visibilityState</a></b>() const</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#applicationCacheQuotaExceeded">applicationCacheQuotaExceeded</a></b>(QWebSecurityOrigin *<i> origin</i>, quint64<i> defaultOriginQuota</i>, quint64<i> totalSpaceNeeded</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#consoleMessageReceived">consoleMessageReceived</a></b>(MessageSource<i> source</i>, MessageLevel<i> level</i>, const QString &amp;<i> message</i>, int<i> lineNumber</i>, const QString &amp;<i> sourceID</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#contentsChanged">contentsChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#databaseQuotaExceeded">databaseQuotaExceeded</a></b>(QWebFrame *<i> frame</i>, QString<i> databaseName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#downloadRequested">downloadRequested</a></b>(const QNetworkRequest &amp;<i> request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#featurePermissionRequestCanceled">featurePermissionRequestCanceled</a></b>(QWebFrame *<i> frame</i>, QWebPage::Feature<i> feature</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#featurePermissionRequested">featurePermissionRequested</a></b>(QWebFrame *<i> frame</i>, QWebPage::Feature<i> feature</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#focusedElementChanged">focusedElementChanged</a></b>(const QWebElement &amp;<i> element</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#frameCreated">frameCreated</a></b>(QWebFrame *<i> frame</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#fullScreenRequested">fullScreenRequested</a></b>(QWebFullScreenRequest<i> fullScreenRequest</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#geometryChangeRequested">geometryChangeRequested</a></b>(const QRect &amp;<i> geom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#linkClicked">linkClicked</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#linkHovered">linkHovered</a></b>(const QString &amp;<i> link</i>, const QString &amp;<i> title</i>, const QString &amp;<i> textContent</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#loadFinished">loadFinished</a></b>(bool<i> ok</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#loadProgress">loadProgress</a></b>(int<i> progress</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#loadStarted">loadStarted</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#menuBarVisibilityChangeRequested">menuBarVisibilityChangeRequested</a></b>(bool<i> visible</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#microFocusChanged">microFocusChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#printRequested">printRequested</a></b>(QWebFrame *<i> frame</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#recentlyAudible-prop">recentlyAudibleChanged</a></b>(bool<i> recentlyAudible</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#repaintRequested">repaintRequested</a></b>(const QRect &amp;<i> dirtyRect</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#restoreFrameStateRequested">restoreFrameStateRequested</a></b>(QWebFrame *<i> frame</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#saveFrameStateRequested">saveFrameStateRequested</a></b>(QWebFrame *<i> frame</i>, QWebHistoryItem *<i> item</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#scrollRequested">scrollRequested</a></b>(int<i> dx</i>, int<i> dy</i>, const QRect &amp;<i> rectToScroll</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#selectionChanged">selectionChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#statusBarMessage">statusBarMessage</a></b>(const QString &amp;<i> text</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#statusBarVisibilityChangeRequested">statusBarVisibilityChangeRequested</a></b>(bool<i> visible</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#toolBarVisibilityChangeRequested">toolBarVisibilityChangeRequested</a></b>(bool<i> visible</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#unsupportedContent">unsupportedContent</a></b>(QNetworkReply *<i> reply</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#viewportChangeRequested">viewportChangeRequested</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#windowCloseRequested">windowCloseRequested</a></b>()</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#acceptNavigationRequest">acceptNavigationRequest</a></b>(QWebFrame *<i> frame</i>, const QNetworkRequest &amp;<i> request</i>, NavigationType<i> type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QString </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#chooseFile">chooseFile</a></b>(QWebFrame *<i> parentFrame</i>, const QString &amp;<i> suggestedFile</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QObject * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#createPlugin">createPlugin</a></b>(const QString &amp;<i> classid</i>, const QUrl &amp;<i> url</i>, const QStringList &amp;<i> paramNames</i>, const QStringList &amp;<i> paramValues</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QWebPage * </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#createWindow">createWindow</a></b>(WebWindowType<i> type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#javaScriptAlert">javaScriptAlert</a></b>(QWebFrame *<i> frame</i>, const QString &amp;<i> msg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#javaScriptConfirm">javaScriptConfirm</a></b>(QWebFrame *<i> frame</i>, const QString &amp;<i> msg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#javaScriptConsoleMessage">javaScriptConsoleMessage</a></b>(const QString &amp;<i> message</i>, int<i> lineNumber</i>, const QString &amp;<i> sourceID</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#javaScriptPrompt">javaScriptPrompt</a></b>(QWebFrame *<i> frame</i>, const QString &amp;<i> msg</i>, const QString &amp;<i> defaultValue</i>, QString *<i> result</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QString </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#userAgentForUrl">userAgentForUrl</a></b>(const QUrl &amp;<i> url</i>) const</td></tr>
+</table></div>
+<a name="related-non-members"></a>
+<h2 id="related-non-members">Related Non-Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#qWebKitMajorVersion">qWebKitMajorVersion</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#qWebKitMinorVersion">qWebKitMinorVersion</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qwebpage.html#qWebKitVersion">qWebKitVersion</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QWebPage-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qwebpage.html">QWebPage</a> class provides an object to view and edit web documents.</p>
+<p><a href="qwebpage.html">QWebPage</a> holds a main frame responsible for web content, settings, the history of navigated links and actions. This class can be used, together with <a href="qwebframe.html">QWebFrame</a>, to provide functionality like <a href="qwebview.html">QWebView</a> in a widget-less environment.</p>
+<p><a href="qwebpage.html">QWebPage</a>'s API is very similar to <a href="qwebview.html">QWebView</a>, as you are still provided with common functions like <a href="qwebpage.html#action">action</a>() (known as <a href="qwebview.html#pageAction">pageAction</a>() in <a href="qwebview.html">QWebView</a>), <a href="qwebpage.html#triggerAction">triggerAction</a>(), <a href="qwebpage.html#findText">findText</a>() and <a href="qwebpage.html#settings">settings</a>(). More <a href="qwebview.html">QWebView</a>-like functions can be found in the main frame of <a href="qwebpage.html">QWebPage</a>, obtained via the <a href="qwebpage.html#mainFrame">mainFrame</a>() function. For example, the <a href="qwebframe.html#load">load</a>(), <a href="qwebframe.html#url-prop">setUrl</a>() and <a href="qwebframe.html#setHtml">setHtml</a>() functions for <a href="qwebpage.html">QWebPage</a> can be accessed using <a href="qwebframe.html">QWebFrame</a>.</p>
+<p>The <a href="qwebpage.html#loadStarted">loadStarted</a>() signal is emitted when the page begins to load.The <a href="qwebpage.html#loadProgress">loadProgress</a>() signal, on the other hand, is emitted whenever an element of the web page completes loading, such as an embedded image, a script, etc. Finally, the <a href="qwebpage.html#loadFinished">loadFinished</a>() signal is emitted when the page contents are loaded completely, independent of script execution or page rendering. Its argument, either true or false, indicates whether or not the load operation succeeded.</p>
+<a name="using-qwebpage-in-a-widget-less-environment"></a>
+<h3 >Using QWebPage in a Widget-less Environment</h3>
+<p>Before you begin painting a <a href="qwebpage.html">QWebPage</a> object, you need to set the size of the viewport by calling <a href="qwebpage.html#viewportSize-prop">setViewportSize</a>(). Then, you invoke the main frame's render function (<a href="qwebframe.html#render">QWebFrame::render</a>()). An example of this is shown in the code snippet below.</p>
+<p>Suppose we have a <code>Thumbnail</code> class as follows:</p>
+<pre class="cpp"><span class="keyword">class</span> Thumbnailer : <span class="keyword">public</span> <span class="type">QObject</span>
+{
+    Q_OBJECT
+
+<span class="keyword">public</span>:
+    Thumbnailer(<span class="keyword">const</span> <span class="type">QUrl</span> <span class="operator">&amp;</span>url);
+
+Q_SIGNALS:
+    <span class="type">void</span> finished();
+
+<span class="keyword">private</span> Q_SLOTS:
+    <span class="type">void</span> render();
+
+<span class="keyword">private</span>:
+    <span class="type"><a href="qwebpage.html#QWebPage">QWebPage</a></span> page;
+
+};</pre>
+<p>The <code>Thumbnail</code>'s constructor takes in a <i>url</i>. We connect our <a href="qwebpage.html">QWebPage</a> object's <a href="qwebpage.html#loadFinished">loadFinished()</a> signal to our private slot, <code>render()</code>.</p>
+<pre class="cpp">Thumbnailer<span class="operator">::</span>Thumbnailer(<span class="keyword">const</span> <span class="type">QUrl</span> <span class="operator">&amp;</span>url)
+{
+    page<span class="operator">.</span>mainFrame()<span class="operator">-</span><span class="operator">&gt;</span>load(url);
+    connect(<span class="operator">&amp;</span>page<span class="operator">,</span> SIGNAL(loadFinished(bool))<span class="operator">,</span>
+        <span class="keyword">this</span><span class="operator">,</span> SLOT(render()));
+}</pre>
+<p>The <code>render()</code> function shows how we can paint a thumbnail using a <a href="qwebpage.html">QWebPage</a> object.</p>
+<pre class="cpp"><span class="type">void</span> Thumbnailer<span class="operator">::</span>render()
+{
+    page<span class="operator">.</span>setViewportSize(page<span class="operator">.</span>mainFrame()<span class="operator">-</span><span class="operator">&gt;</span>contentsSize());
+    <span class="type">QImage</span> image(page<span class="operator">.</span>viewportSize()<span class="operator">,</span> <span class="type">QImage</span><span class="operator">::</span>Format_ARGB32);
+    <span class="type">QPainter</span> painter(<span class="operator">&amp;</span>image);
+
+    page<span class="operator">.</span>mainFrame()<span class="operator">-</span><span class="operator">&gt;</span>render(<span class="operator">&amp;</span>painter);
+    painter<span class="operator">.</span>end();
+
+    <span class="type">QImage</span> thumbnail <span class="operator">=</span> image<span class="operator">.</span>scaled(<span class="number">400</span><span class="operator">,</span> <span class="number">400</span>);
+    thumbnail<span class="operator">.</span>save(<span class="string">&quot;thumbnail.png&quot;</span>);
+
+    <span class="keyword">emit</span> finished();
+}</pre>
+<p>We begin by setting the <a href="qwebpage.html#viewportSize-prop">viewportSize</a> and then we instantiate a QImage object, <code>image</code>, with the same size as our <a href="qwebpage.html#viewportSize-prop">viewportSize</a>. This image is then sent as a parameter to <code>painter</code>. Next, we render the contents of the main frame and its subframes into <code>painter</code>. Finally, we save the scaled image.</p>
+</div>
+<p><b>See also </b><a href="qwebframe.html">QWebFrame</a>.</p>
+<!-- @@@QWebPage -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$ErrorDomain$$$QtNetwork$$$Http$$$WebKit -->
+<h3 class="fn" id="ErrorDomain-enum"><a name="ErrorDomain-enum"></a>enum QWebPage::&#8203;<span class="name">ErrorDomain</span></h3>
+<p>This enum describes the domain of an <a href="qwebpage-errorpageextensionoption.html">ErrorPageExtensionOption</a> object (i.e&#x2e; the layer in which the error occurred).</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::QtNetwork</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">The error occurred in the QtNetwork layer; the error code is of type QNetworkReply::NetworkError.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Http</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">The error occurred in the HTTP layer; the error code is a HTTP status code (see QNetworkRequest::HttpStatusCodeAttribute).</td></tr>
+<tr><td class="topAlign"><code>QWebPage::WebKit</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">The error is an internal WebKit error.</td></tr>
+</table></div>
+<p>This enum was introduced or modified in  Qt 4.6.</p>
+<!-- @@@ErrorDomain -->
+<!-- $$$Extension$$$ChooseMultipleFilesExtension$$$ErrorPageExtension -->
+<h3 class="fn" id="Extension-enum"><a name="Extension-enum"></a>enum QWebPage::&#8203;<span class="name">Extension</span></h3>
+<p>This enum describes the types of extensions that the page can support. Before using these extensions, you should verify that the extension is supported by calling <a href="qwebpage.html#supportsExtension">supportsExtension</a>().</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::ChooseMultipleFilesExtension</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">Whether the web page supports multiple file selection. This extension is invoked when the web content requests one or more file names, for example as a result of the user clicking on a &quot;file upload&quot; button in a HTML form where multiple file selection is allowed.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ErrorPageExtension</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">Whether the web page can provide an error page when loading fails. (introduced in Qt 4.6)</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage-choosemultiplefilesextensionoption.html">ChooseMultipleFilesExtensionOption</a>, <a href="qwebpage-choosemultiplefilesextensionreturn.html">ChooseMultipleFilesExtensionReturn</a>, <a href="qwebpage-errorpageextensionoption.html">ErrorPageExtensionOption</a>, and <a href="qwebpage-errorpageextensionreturn.html">ErrorPageExtensionReturn</a>.</p>
+<!-- @@@Extension -->
+<!-- $$$Feature$$$Notifications$$$Geolocation -->
+<h3 class="fn" id="Feature-enum"><a name="Feature-enum"></a>enum QWebPage::&#8203;<span class="name">Feature</span></h3>
+<p>This enum describes the platform feature access categories that the user may be asked to grant or deny access to.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::Notifications</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">Access to notifications</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Geolocation</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">Access to location hardware or service</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#featurePermissionRequested">featurePermissionRequested</a>(), <a href="qwebpage.html#featurePermissionRequestCanceled">featurePermissionRequestCanceled</a>(), <a href="qwebpage.html#setFeaturePermission">setFeaturePermission</a>(), and <a href="qwebpage.html#PermissionPolicy-enum">PermissionPolicy</a>.</p>
+<!-- @@@Feature -->
+<!-- $$$FindFlag$$$FindBackward$$$FindCaseSensitively$$$FindWrapsAroundDocument$$$HighlightAllOccurrences$$$FindAtWordBeginningsOnly$$$TreatMedialCapitalAsWordBeginning$$$FindBeginsInSelection$$$FindAtWordEndingsOnly$$$FindExactMatchOnly -->
+<h3 class="flags" id="FindFlag-enum"><a name="FindFlag-enum"></a>enum QWebPage::&#8203;<span class="name">FindFlag</span><br/>flags QWebPage::&#8203;<span class="name">FindFlags</span></h3>
+<p>This enum describes the options available to the <a href="qwebpage.html#findText">findText</a>() function. The options can be OR-ed together from the following list:</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::FindBackward</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">Searches backwards instead of forwards.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::FindCaseSensitively</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">By default <a href="qwebpage.html#findText">findText</a>() works case insensitive. Specifying this option changes the behaviour to a case sensitive find operation.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::FindWrapsAroundDocument</code></td><td class="topAlign"><code>4</code></td><td class="topAlign">Makes <a href="qwebpage.html#findText">findText</a>() restart from the beginning of the document if the end was reached and the text was not found.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::HighlightAllOccurrences</code></td><td class="topAlign"><code>8</code></td><td class="topAlign">Highlights all existing occurrences of a specific string. (This value was introduced in 4.6&#x2e;)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::FindAtWordBeginningsOnly</code></td><td class="topAlign"><code>16</code></td><td class="topAlign">Searches for the sub-string only at the beginnings of words. (This value was introduced in 5.2&#x2e;)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::TreatMedialCapitalAsWordBeginning</code></td><td class="topAlign"><code>32</code></td><td class="topAlign">Treats a capital letter occurring anywhere in the middle of a word as the beginning of a new word. (This value was introduced in 5.2&#x2e;)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::FindBeginsInSelection</code></td><td class="topAlign"><code>64</code></td><td class="topAlign">Begin searching inside the text selection first. (This value was introduced in 5.2&#x2e;)</td></tr>
+</table></div>
+<p>The FindFlags type is a typedef for <a href="">QFlags</a>&lt;FindFlag&gt;. It stores an OR combination of FindFlag values.</p>
+<!-- @@@FindFlag -->
+<!-- $$$LinkDelegationPolicy$$$DontDelegateLinks$$$DelegateExternalLinks$$$DelegateAllLinks -->
+<h3 class="fn" id="LinkDelegationPolicy-enum"><a name="LinkDelegationPolicy-enum"></a>enum QWebPage::&#8203;<span class="name">LinkDelegationPolicy</span></h3>
+<p>This enum defines the delegation policies a webpage can have when activating links and emitting the <a href="qwebpage.html#linkClicked">linkClicked</a>() signal.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::DontDelegateLinks</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">No links are delegated. Instead, <a href="qwebpage.html">QWebPage</a> tries to handle them all.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DelegateExternalLinks</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">When activating links that point to documents not stored on the local filesystem or an equivalent - such as the Qt resource system - then <a href="qwebpage.html#linkClicked">linkClicked</a>() is emitted.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DelegateAllLinks</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">Whenever a link is activated the <a href="qwebpage.html#linkClicked">linkClicked</a>() signal is emitted.</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#linkDelegationPolicy-prop">QWebPage::linkDelegationPolicy</a>.</p>
+<!-- @@@LinkDelegationPolicy -->
+<!-- $$$MessageLevel$$$LogMessageLevel$$$WarningMessageLevel$$$ErrorMessageLevel$$$DebugMessageLevel$$$InfoMessageLevel -->
+<h3 class="fn" id="MessageLevel-enum"><a name="MessageLevel-enum"></a>enum QWebPage::&#8203;<span class="name">MessageLevel</span></h3>
+<!-- @@@MessageLevel -->
+<!-- $$$MessageSource$$$XmlMessageSource$$$JSMessageSource$$$NetworkMessageSource$$$ConsoleAPIMessageSource$$$StorageMessageSource$$$AppCacheMessageSource$$$RenderingMessageSource$$$CSSMessageSource$$$SecurityMessageSource$$$ContentBlockerMessageSource$$$OtherMessageSource -->
+<h3 class="fn" id="MessageSource-enum"><a name="MessageSource-enum"></a>enum QWebPage::&#8203;<span class="name">MessageSource</span></h3>
+<!-- @@@MessageSource -->
+<!-- $$$NavigationType$$$NavigationTypeLinkClicked$$$NavigationTypeFormSubmitted$$$NavigationTypeBackOrForward$$$NavigationTypeReload$$$NavigationTypeFormResubmitted$$$NavigationTypeOther -->
+<h3 class="fn" id="NavigationType-enum"><a name="NavigationType-enum"></a>enum QWebPage::&#8203;<span class="name">NavigationType</span></h3>
+<p>This enum describes the types of navigation available when browsing through hyperlinked documents.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::NavigationTypeLinkClicked</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">The user clicked on a link or pressed return on a focused link.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::NavigationTypeFormSubmitted</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">The user activated a submit button for an HTML form.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::NavigationTypeBackOrForward</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">Navigation to a previously shown document in the back or forward history is requested.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::NavigationTypeReload</code></td><td class="topAlign"><code>3</code></td><td class="topAlign">The user activated the reload action.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::NavigationTypeFormResubmitted</code></td><td class="topAlign"><code>4</code></td><td class="topAlign">An HTML form was submitted a second time.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::NavigationTypeOther</code></td><td class="topAlign"><code>5</code></td><td class="topAlign">A navigation to another document using a method not listed above.</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#acceptNavigationRequest">acceptNavigationRequest</a>().</p>
+<!-- @@@NavigationType -->
+<!-- $$$PermissionPolicy$$$PermissionUnknown$$$PermissionGrantedByUser$$$PermissionDeniedByUser -->
+<h3 class="fn" id="PermissionPolicy-enum"><a name="PermissionPolicy-enum"></a>enum QWebPage::&#8203;<span class="name">PermissionPolicy</span></h3>
+<p>This enum describes the permission policies that the user may set for data or device access.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::PermissionUnknown</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">It is unknown whether the user grants or denies permission.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::PermissionGrantedByUser</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">The user has granted permission.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::PermissionDeniedByUser</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">The user has denied permission.</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#featurePermissionRequested">featurePermissionRequested</a>(), <a href="qwebpage.html#featurePermissionRequestCanceled">featurePermissionRequestCanceled</a>(), <a href="qwebpage.html#setFeaturePermission">setFeaturePermission</a>(), and <a href="qwebpage.html#Feature-enum">Feature</a>.</p>
+<!-- @@@PermissionPolicy -->
+<!-- $$$VisibilityState$$$VisibilityStateVisible$$$VisibilityStateHidden$$$VisibilityStatePrerender$$$VisibilityStateUnloaded -->
+<h3 class="fn" id="VisibilityState-enum"><a name="VisibilityState-enum"></a>enum QWebPage::&#8203;<span class="name">VisibilityState</span></h3>
+<p>This enum defines visibility states that a webpage can take.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::VisibilityStateVisible</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">The webpage is at least partially visible at on at least one screen.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::VisibilityStateHidden</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">The webpage is not visible at all on any screen.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::VisibilityStatePrerender</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">The webpage is loaded off-screen and is not visible.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::VisibilityStateUnloaded</code></td><td class="topAlign"><code>3</code></td><td class="topAlign">The webpage is unloading its content. More information about this values can be found at <a href="http://www.w3.org/TR/page-visibility/#dom-document-visibilitystate">W3C Recommendation: Page Visibility: visibilityState attribute</a>.</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#visibilityState-prop">QWebPage::visibilityState</a>.</p>
+<!-- @@@VisibilityState -->
+<!-- $$$WebAction$$$NoWebAction$$$OpenLink$$$OpenLinkInNewWindow$$$OpenFrameInNewWindow$$$DownloadLinkToDisk$$$CopyLinkToClipboard$$$OpenImageInNewWindow$$$DownloadImageToDisk$$$CopyImageToClipboard$$$Back$$$Forward$$$Stop$$$Reload$$$Cut$$$Copy$$$Paste$$$Undo$$$Redo$$$MoveToNextChar$$$MoveToPreviousChar$$$MoveToNextWord$$$MoveToPreviousWord$$$MoveToNextLine$$$MoveToPreviousLine$$$MoveToStartOfLine$$$MoveToEndOfLine$$$MoveToStartOfBlock$$$MoveToEndOfBlock$$$MoveToStartOfDocument$$$MoveToEndOfDocument$$$SelectNextChar$$$SelectPreviousChar$$$SelectNextWord$$$SelectPreviousWord$$$SelectNextLine$$$SelectPreviousLine$$$SelectStartOfLine$$$SelectEndOfLine$$$SelectStartOfBlock$$$SelectEndOfBlock$$$SelectStartOfDocument$$$SelectEndOfDocument$$$DeleteStartOfWord$$$DeleteEndOfWord$$$SetTextDirectionDefault$$$SetTextDirectionLeftToRight$$$SetTextDirectionRightToLeft$$$ToggleBold$$$ToggleItalic$$$ToggleUnderline$$$InspectElement$$$InsertParagraphSeparator$$$InsertLineSeparator$$$SelectAll$$$ReloadAndBypassCache$$$PasteAndMatchStyle$$$RemoveFormat$$$ToggleStrikethrough$$$ToggleSubscript$$$ToggleSuperscript$$$InsertUnorderedList$$$InsertOrderedList$$$Indent$$$Outdent$$$AlignCenter$$$AlignJustified$$$AlignLeft$$$AlignRight$$$StopScheduledPageRefresh$$$CopyImageUrlToClipboard$$$OpenLinkInThisWindow$$$DownloadMediaToDisk$$$CopyMediaUrlToClipboard$$$ToggleMediaControls$$$ToggleMediaLoop$$$ToggleMediaPlayPause$$$ToggleMediaMute$$$ToggleVideoFullscreen$$$RequestClose$$$Unselect$$$WebActionCount -->
+<h3 class="fn" id="WebAction-enum"><a name="WebAction-enum"></a>enum QWebPage::&#8203;<span class="name">WebAction</span></h3>
+<p>This enum describes the types of action which can be performed on the web page.</p>
+<p>Actions only have an effect when they are applicable. The availability of actions can be be determined by checking isEnabled() on the action returned by <a href="qwebpage.html#action">action</a>().</p>
+<p>One method of enabling the text editing, cursor movement, and text selection actions is by setting <a href="qwebpage.html#contentEditable-prop">contentEditable</a> to true.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::NoWebAction</code></td><td class="topAlign"><code>-1</code></td><td class="topAlign">No action is triggered.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::OpenLink</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">Open the current link.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::OpenLinkInNewWindow</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">Open the current link in a new window.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::OpenLinkInThisWindow</code></td><td class="topAlign"><code>69</code></td><td class="topAlign">Open the current link without opening a new window. Used on links that would default to opening in another frame or a new window. (Added in Qt 5.0)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::OpenFrameInNewWindow</code></td><td class="topAlign"><code>2</code></td><td class="topAlign">Replicate the current frame in a new window.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DownloadLinkToDisk</code></td><td class="topAlign"><code>3</code></td><td class="topAlign">Download the current link to the disk.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::CopyLinkToClipboard</code></td><td class="topAlign"><code>4</code></td><td class="topAlign">Copy the current link to the clipboard.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::OpenImageInNewWindow</code></td><td class="topAlign"><code>5</code></td><td class="topAlign">Open the highlighted image in a new window.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DownloadImageToDisk</code></td><td class="topAlign"><code>6</code></td><td class="topAlign">Download the highlighted image to the disk.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::CopyImageToClipboard</code></td><td class="topAlign"><code>7</code></td><td class="topAlign">Copy the highlighted image to the clipboard. (Added in Qt 4.8)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::CopyImageUrlToClipboard</code></td><td class="topAlign"><code>68</code></td><td class="topAlign">Copy the highlighted image's URL to the clipboard.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Back</code></td><td class="topAlign"><code>8</code></td><td class="topAlign">Navigate back in the history of navigated links.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Forward</code></td><td class="topAlign"><code>9</code></td><td class="topAlign">Navigate forward in the history of navigated links.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Stop</code></td><td class="topAlign"><code>10</code></td><td class="topAlign">Stop loading the current page.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::StopScheduledPageRefresh</code></td><td class="topAlign"><code>67</code></td><td class="topAlign">Stop all pending page refresh/redirect requests. (Added in Qt 4.7)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Reload</code></td><td class="topAlign"><code>11</code></td><td class="topAlign">Reload the current page.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ReloadAndBypassCache</code></td><td class="topAlign"><code>53</code></td><td class="topAlign">Reload the current page, but do not use any local cache. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Cut</code></td><td class="topAlign"><code>12</code></td><td class="topAlign">Cut the content currently selected into the clipboard.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Copy</code></td><td class="topAlign"><code>13</code></td><td class="topAlign">Copy the content currently selected into the clipboard.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Paste</code></td><td class="topAlign"><code>14</code></td><td class="topAlign">Paste content from the clipboard.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Undo</code></td><td class="topAlign"><code>15</code></td><td class="topAlign">Undo the last editing action.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Redo</code></td><td class="topAlign"><code>16</code></td><td class="topAlign">Redo the last editing action.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToNextChar</code></td><td class="topAlign"><code>17</code></td><td class="topAlign">Move the cursor to the next character.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToPreviousChar</code></td><td class="topAlign"><code>18</code></td><td class="topAlign">Move the cursor to the previous character.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToNextWord</code></td><td class="topAlign"><code>19</code></td><td class="topAlign">Move the cursor to the next word.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToPreviousWord</code></td><td class="topAlign"><code>20</code></td><td class="topAlign">Move the cursor to the previous word.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToNextLine</code></td><td class="topAlign"><code>21</code></td><td class="topAlign">Move the cursor to the next line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToPreviousLine</code></td><td class="topAlign"><code>22</code></td><td class="topAlign">Move the cursor to the previous line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToStartOfLine</code></td><td class="topAlign"><code>23</code></td><td class="topAlign">Move the cursor to the start of the line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToEndOfLine</code></td><td class="topAlign"><code>24</code></td><td class="topAlign">Move the cursor to the end of the line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToStartOfBlock</code></td><td class="topAlign"><code>25</code></td><td class="topAlign">Move the cursor to the start of the block.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToEndOfBlock</code></td><td class="topAlign"><code>26</code></td><td class="topAlign">Move the cursor to the end of the block.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToStartOfDocument</code></td><td class="topAlign"><code>27</code></td><td class="topAlign">Move the cursor to the start of the document.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::MoveToEndOfDocument</code></td><td class="topAlign"><code>28</code></td><td class="topAlign">Move the cursor to the end of the document.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectNextChar</code></td><td class="topAlign"><code>29</code></td><td class="topAlign">Select to the next character.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectPreviousChar</code></td><td class="topAlign"><code>30</code></td><td class="topAlign">Select to the previous character.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectNextWord</code></td><td class="topAlign"><code>31</code></td><td class="topAlign">Select to the next word.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectPreviousWord</code></td><td class="topAlign"><code>32</code></td><td class="topAlign">Select to the previous word.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectNextLine</code></td><td class="topAlign"><code>33</code></td><td class="topAlign">Select to the next line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectPreviousLine</code></td><td class="topAlign"><code>34</code></td><td class="topAlign">Select to the previous line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectStartOfLine</code></td><td class="topAlign"><code>35</code></td><td class="topAlign">Select to the start of the line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectEndOfLine</code></td><td class="topAlign"><code>36</code></td><td class="topAlign">Select to the end of the line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectStartOfBlock</code></td><td class="topAlign"><code>37</code></td><td class="topAlign">Select to the start of the block.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectEndOfBlock</code></td><td class="topAlign"><code>38</code></td><td class="topAlign">Select to the end of the block.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectStartOfDocument</code></td><td class="topAlign"><code>39</code></td><td class="topAlign">Select to the start of the document.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectEndOfDocument</code></td><td class="topAlign"><code>40</code></td><td class="topAlign">Select to the end of the document.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DeleteStartOfWord</code></td><td class="topAlign"><code>41</code></td><td class="topAlign">Delete to the start of the word.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DeleteEndOfWord</code></td><td class="topAlign"><code>42</code></td><td class="topAlign">Delete to the end of the word.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SetTextDirectionDefault</code></td><td class="topAlign"><code>43</code></td><td class="topAlign">Set the text direction to the default direction.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SetTextDirectionLeftToRight</code></td><td class="topAlign"><code>44</code></td><td class="topAlign">Set the text direction to left-to-right.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SetTextDirectionRightToLeft</code></td><td class="topAlign"><code>45</code></td><td class="topAlign">Set the text direction to right-to-left.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleBold</code></td><td class="topAlign"><code>46</code></td><td class="topAlign">Toggle the formatting between bold and normal weight.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleItalic</code></td><td class="topAlign"><code>47</code></td><td class="topAlign">Toggle the formatting between italic and normal style.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleUnderline</code></td><td class="topAlign"><code>48</code></td><td class="topAlign">Toggle underlining.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::InspectElement</code></td><td class="topAlign"><code>49</code></td><td class="topAlign">Show the Web Inspector with the currently highlighted HTML element.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::InsertParagraphSeparator</code></td><td class="topAlign"><code>50</code></td><td class="topAlign">Insert a new paragraph.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::InsertLineSeparator</code></td><td class="topAlign"><code>51</code></td><td class="topAlign">Insert a new line.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::SelectAll</code></td><td class="topAlign"><code>52</code></td><td class="topAlign">Selects all content.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::PasteAndMatchStyle</code></td><td class="topAlign"><code>54</code></td><td class="topAlign">Paste content from the clipboard with current style. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::RemoveFormat</code></td><td class="topAlign"><code>55</code></td><td class="topAlign">Removes formatting and style. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleStrikethrough</code></td><td class="topAlign"><code>56</code></td><td class="topAlign">Toggle the formatting between strikethrough and normal style. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleSubscript</code></td><td class="topAlign"><code>57</code></td><td class="topAlign">Toggle the formatting between subscript and baseline. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleSuperscript</code></td><td class="topAlign"><code>58</code></td><td class="topAlign">Toggle the formatting between supercript and baseline. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::InsertUnorderedList</code></td><td class="topAlign"><code>59</code></td><td class="topAlign">Toggles the selection between an ordered list and a normal block. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::InsertOrderedList</code></td><td class="topAlign"><code>60</code></td><td class="topAlign">Toggles the selection between an ordered list and a normal block. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Indent</code></td><td class="topAlign"><code>61</code></td><td class="topAlign">Increases the indentation of the currently selected format block by one increment. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Outdent</code></td><td class="topAlign"><code>62</code></td><td class="topAlign">Decreases the indentation of the currently selected format block by one increment. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::AlignCenter</code></td><td class="topAlign"><code>63</code></td><td class="topAlign">Applies center alignment to content. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::AlignJustified</code></td><td class="topAlign"><code>64</code></td><td class="topAlign">Applies full justification to content. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::AlignLeft</code></td><td class="topAlign"><code>65</code></td><td class="topAlign">Applies left justification to content. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::AlignRight</code></td><td class="topAlign"><code>66</code></td><td class="topAlign">Applies right justification to content. (Added in Qt 4.6)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::DownloadMediaToDisk</code></td><td class="topAlign"><code>70</code></td><td class="topAlign">Download the hovered audio or video to the disk. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::CopyMediaUrlToClipboard</code></td><td class="topAlign"><code>71</code></td><td class="topAlign">Copy the hovered audio or video's URL to the clipboard. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleMediaControls</code></td><td class="topAlign"><code>72</code></td><td class="topAlign">Toggles between showing and hiding the controls for the hovered audio or video element. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleMediaLoop</code></td><td class="topAlign"><code>73</code></td><td class="topAlign">Toggles whether the hovered audio or video should loop on completetion or not. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleMediaPlayPause</code></td><td class="topAlign"><code>74</code></td><td class="topAlign">Toggles the play/pause state of the hovered audio or video element. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleMediaMute</code></td><td class="topAlign"><code>75</code></td><td class="topAlign">Mutes or unmutes the hovered audio or video element. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::ToggleVideoFullscreen</code></td><td class="topAlign"><code>76</code></td><td class="topAlign">Switches the hovered video element into or out of fullscreen mode. (Added in Qt 5.2)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::RequestClose</code></td><td class="topAlign"><code>77</code></td><td class="topAlign">Request to close the web page. If defined, the window.onbeforeunload handler is run, and the user can confirm or reject to close the page. If the close request is confirmed, <a href="qwebpage.html#windowCloseRequested">windowCloseRequested</a> is emitted. (Added in ?)</td></tr>
+<tr><td class="topAlign"><code>QWebPage::Unselect</code></td><td class="topAlign"><code>78</code></td><td class="topAlign">Deselects existing selection. (Added in <a href="qtwebkit-qmlmodule.html">QtWebKit</a> 5.9)</td></tr>
+</table></div>
+<!-- @@@WebAction -->
+<!-- $$$WebWindowType$$$WebBrowserWindow$$$WebModalDialog -->
+<h3 class="fn" id="WebWindowType-enum"><a name="WebWindowType-enum"></a>enum QWebPage::&#8203;<span class="name">WebWindowType</span></h3>
+<p>This enum describes the types of window that can be created by the <a href="qwebpage.html#createWindow">createWindow</a>() function.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QWebPage::WebBrowserWindow</code></td><td class="topAlign"><code>0</code></td><td class="topAlign">The window is a regular web browser window.</td></tr>
+<tr><td class="topAlign"><code>QWebPage::WebModalDialog</code></td><td class="topAlign"><code>1</code></td><td class="topAlign">The window acts as modal dialog.</td></tr>
+</table></div>
+<!-- @@@WebWindowType -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$contentEditable-prop$$$isContentEditable$$$setContentEditablebool -->
+<h3 class="fn" id="contentEditable-prop"><a name="contentEditable-prop"></a><span class="name">contentEditable</span> : <span class="type">bool</span></h3>
+<p>This property holds whether the content in this QWebPage is editable or not.</p>
+<p>If this property is enabled the contents of the page can be edited by the user through a visible cursor. If disabled (the default) only HTML elements in the web page with their <code>contenteditable</code> attribute set are editable.</p>
+<p>This property was introduced in  Qt 4.5.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isContentEditable</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setContentEditable</b></span>(bool<i> editable</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#modified-prop">modified</a>, <a href="qwebpage.html#contentsChanged">contentsChanged</a>(), and <a href="qwebpage.html#WebAction-enum">WebAction</a>.</p>
+<!-- @@@contentEditable -->
+<!-- $$$forwardUnsupportedContent-prop$$$forwardUnsupportedContent$$$setForwardUnsupportedContentbool -->
+<h3 class="fn" id="forwardUnsupportedContent-prop"><a name="forwardUnsupportedContent-prop"></a><span class="name">forwardUnsupportedContent</span> : <span class="type">bool</span></h3>
+<p>This property holds whether QWebPage should forward unsupported content.</p>
+<p>If enabled, the <a href="qwebpage.html#unsupportedContent">unsupportedContent</a>() signal is emitted with a network reply that can be used to read the content.</p>
+<p>If disabled, the download of such content is aborted immediately.</p>
+<p>By default unsupported content is not forwarded.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>forwardUnsupportedContent</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setForwardUnsupportedContent</b></span>(bool<i> forward</i>)</td></tr>
+</table></div>
+<!-- @@@forwardUnsupportedContent -->
+<!-- $$$hasSelection-prop$$$hasSelection -->
+<h3 class="fn" id="hasSelection-prop"><a name="hasSelection-prop"></a><span class="name">hasSelection</span> : const <span class="type">bool</span></h3>
+<p>This property holds whether this page contains selected content or not.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>hasSelection</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#selectionChanged">selectionChanged</a>().</p>
+<!-- @@@hasSelection -->
+<!-- $$$linkDelegationPolicy-prop$$$linkDelegationPolicy$$$setLinkDelegationPolicyLinkDelegationPolicy -->
+<h3 class="fn" id="linkDelegationPolicy-prop"><a name="linkDelegationPolicy-prop"></a><span class="name">linkDelegationPolicy</span> : <span class="type"><a href="qwebpage.html#LinkDelegationPolicy-enum">LinkDelegationPolicy</a></span></h3>
+<p>This property holds how QWebPage should delegate the handling of links through the linkClicked() signal.</p>
+<p>The default is to delegate no links.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> LinkDelegationPolicy </td><td class="memItemRight bottomAlign"><span class="name"><b>linkDelegationPolicy</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setLinkDelegationPolicy</b></span>(LinkDelegationPolicy<i> policy</i>)</td></tr>
+</table></div>
+<!-- @@@linkDelegationPolicy -->
+<!-- $$$modified-prop$$$isModified -->
+<h3 class="fn" id="modified-prop"><a name="modified-prop"></a><span class="name">modified</span> : const <span class="type">bool</span></h3>
+<p>This property holds whether the page contains unsubmitted form data, or the contents have been changed.</p>
+<p>By default, this property is false.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isModified</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#contentsChanged">contentsChanged</a>(), <a href="qwebpage.html#contentEditable-prop">contentEditable</a>, and <a href="qwebpage.html#undoStack">undoStack</a>().</p>
+<!-- @@@modified -->
+<!-- $$$palette-prop$$$palette$$$setPaletteconstQPalette& -->
+<h3 class="fn" id="palette-prop"><a name="palette-prop"></a><span class="name">palette</span> : <span class="type">QPalette</span></h3>
+<p>This property holds the page's palette.</p>
+<p>The base brush of the palette is used to draw the background of the main frame.</p>
+<p>By default, this property contains the application's default palette.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QPalette </td><td class="memItemRight bottomAlign"><span class="name"><b>palette</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setPalette</b></span>(const QPalette &amp;<i> palette</i>)</td></tr>
+</table></div>
+<!-- @@@palette -->
+<!-- $$$preferredContentsSize-prop$$$preferredContentsSize$$$setPreferredContentsSizeconstQSize& -->
+<h3 class="fn" id="preferredContentsSize-prop"><a name="preferredContentsSize-prop"></a><span class="name">preferredContentsSize</span> : <span class="type">QSize</span></h3>
+<p>This property holds a custom size used for laying out the page contents.</p>
+<p>By default all pages are laid out using the viewport of the page as the base.</p>
+<p>As pages mostly are designed for desktop usage, they often do not layout properly on small devices as the contents require a certain view width. For this reason it is common to use a different layout size and then scale the contents to fit within the actual view.</p>
+<p>If this property is set to a valid size, this size is used for all layout needs instead of the size of the viewport.</p>
+<p>Setting an invalid size, makes the page fall back to using the viewport size for layout.</p>
+<p>This property was introduced in  Qt 4.6.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QSize </td><td class="memItemRight bottomAlign"><span class="name"><b>preferredContentsSize</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setPreferredContentsSize</b></span>(const QSize &amp;<i> size</i>) const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#viewportSize-prop">viewportSize</a>.</p>
+<!-- @@@preferredContentsSize -->
+<!-- $$$recentlyAudible-prop$$$recentlyAudible$$$recentlyAudibleChangedbool -->
+<h3 class="fn" id="recentlyAudible-prop"><a name="recentlyAudible-prop"></a><span class="name">recentlyAudible</span> : const <span class="type">bool</span></h3>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>recentlyAudible</b></span>() const</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>recentlyAudibleChanged</b></span>(bool<i> recentlyAudible</i>)</td></tr>
+</table></div>
+<!-- @@@recentlyAudible -->
+<!-- $$$selectedHtml-prop$$$selectedHtml -->
+<h3 class="fn" id="selectedHtml-prop"><a name="selectedHtml-prop"></a><span class="name">selectedHtml</span> : const <span class="type">QString</span></h3>
+<p>This property holds the HTML currently selected.</p>
+<p>By default, this property contains an empty string.</p>
+<p>This property was introduced in  Qt 4.8.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>selectedHtml</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#selectionChanged">selectionChanged</a>() and <a href="qwebpage.html#selectedText-prop">selectedText</a>().</p>
+<!-- @@@selectedHtml -->
+<!-- $$$selectedText-prop$$$selectedText -->
+<h3 class="fn" id="selectedText-prop"><a name="selectedText-prop"></a><span class="name">selectedText</span> : const <span class="type">QString</span></h3>
+<p>This property holds the text currently selected.</p>
+<p>By default, this property contains an empty string.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>selectedText</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebpage.html#selectionChanged">selectionChanged</a>() and <a href="qwebpage.html#selectedHtml-prop">selectedHtml</a>().</p>
+<!-- @@@selectedText -->
+<!-- $$$viewportSize-prop$$$viewportSize$$$setViewportSizeconstQSize& -->
+<h3 class="fn" id="viewportSize-prop"><a name="viewportSize-prop"></a><span class="name">viewportSize</span> : <span class="type">QSize</span></h3>
+<p>This property holds the size of the viewport.</p>
+<p>The size affects for example the visibility of scrollbars if the document is larger than the viewport.</p>
+<p>By default, for a newly-created Web page, this property contains a size with zero width and height.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QSize </td><td class="memItemRight bottomAlign"><span class="name"><b>viewportSize</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setViewportSize</b></span>(const QSize &amp;<i> size</i>) const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebframe.html#render">QWebFrame::render</a>() and <a href="qwebpage.html#preferredContentsSize-prop">preferredContentsSize</a>.</p>
+<!-- @@@viewportSize -->
+<!-- $$$visibilityState-prop$$$visibilityState$$$setVisibilityStateVisibilityState -->
+<h3 class="fn" id="visibilityState-prop"><a name="visibilityState-prop"></a><span class="name">visibilityState</span> : <span class="type"><a href="qwebpage.html#VisibilityState-enum">VisibilityState</a></span></h3>
+<p>This property holds the page's visibility state.</p>
+<p>This property should be changed by Qt applications who want to notify the JavaScript application that the visibility state has changed (e.g&#x2e; by reimplementing QWidget::setVisible). The visibility state will be updated with the <i>state</i> parameter value only if it's different from the previous set. Then, HTML DOM Document Object attributes 'hidden' and 'visibilityState' will be updated to the correct value and a 'visiblitychange' event will be fired. More information about this HTML5 API can be found at <a href="http://www.w3.org/TR/page-visibility/">W3C Recommendation: Page Visibility</a>.</p>
+<p>By default, this property is set to <a href="qwebpage.html#VisibilityState-enum">VisibilityStateVisible</a>.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> VisibilityState </td><td class="memItemRight bottomAlign"><span class="name"><b>visibilityState</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setVisibilityState</b></span>(VisibilityState)</td></tr>
+</table></div>
+<!-- @@@visibilityState -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QWebPage[overload1]$$$QWebPageQObject* -->
+<h3 class="fn" id="QWebPage"><a name="QWebPage"></a>QWebPage::&#8203;<span class="name">QWebPage</span>(<span class="type">QObject</span> *<i> parent</i> = Q_NULLPTR)</h3>
+<p>Constructs an empty <a href="qwebpage.html">QWebPage</a> with parent <i>parent</i>.</p>
+<!-- @@@QWebPage -->
+<!-- $$$~QWebPage[overload1]$$$~QWebPage -->
+<h3 class="fn" id="dtor.QWebPage"><a name="dtor.QWebPage"></a>QWebPage::&#8203;<span class="name">~QWebPage</span>()</h3>
+<p>Destroys the web page.</p>
+<!-- @@@~QWebPage -->
+<!-- $$$acceptNavigationRequest[overload1]$$$acceptNavigationRequestQWebFrame*constQNetworkRequest&NavigationType -->
+<h3 class="fn" id="acceptNavigationRequest"><a name="acceptNavigationRequest"></a><code>[virtual protected] </code><span class="type">bool</span> QWebPage::&#8203;<span class="name">acceptNavigationRequest</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, const <span class="type">QNetworkRequest</span> &amp;<i> request</i>, <span class="type"><a href="qwebpage.html#NavigationType-enum">NavigationType</a></span><i> type</i>)</h3>
+<p>This function is called whenever <a href="qwebpage.html#ErrorDomain-enum">WebKit</a> requests to navigate <i>frame</i> to the resource specified by <i>request</i> by means of the specified navigation type <i>type</i>.</p>
+<p>If <i>frame</i> is a null pointer then navigation to a new window is requested. If the request is accepted <a href="qwebpage.html#createWindow">createWindow</a>() will be called.</p>
+<p>The default implementation interprets the page's <a href="qwebpage.html#linkDelegationPolicy-prop">linkDelegationPolicy</a> and emits <a href="qwebpage.html#linkClicked">linkClicked</a> accordingly or returns true to let <a href="qwebpage.html">QWebPage</a> handle the navigation itself.</p>
+<p><b>See also </b><a href="qwebpage.html#createWindow">createWindow</a>().</p>
+<!-- @@@acceptNavigationRequest -->
+<!-- $$$action[overload1]$$$actionWebAction -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type">QAction</span> * QWebPage::&#8203;<span class="name">action</span>(<span class="type"><a href="qwebpage.html#WebAction-enum">WebAction</a></span><i> action</i>) const</h3>
+<p>Returns a QAction for the specified <a href="qwebpage.html#WebAction-enum">WebAction</a> <i>action</i>.</p>
+<p>The action is owned by the <a href="qwebpage.html">QWebPage</a> but you can customize the look by changing its properties.</p>
+<p><a href="qwebpage.html">QWebPage</a> also takes care of implementing the action, so that upon triggering the corresponding action is performed on the page.</p>
+<p><b>See also </b><a href="qwebpage.html#triggerAction">triggerAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$applicationCacheQuotaExceeded[overload1]$$$applicationCacheQuotaExceededQWebSecurityOrigin*quint64quint64 -->
+<h3 class="fn" id="applicationCacheQuotaExceeded"><a name="applicationCacheQuotaExceeded"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">applicationCacheQuotaExceeded</span>(<span class="type"><a href="qwebsecurityorigin.html">QWebSecurityOrigin</a></span> *<i> origin</i>, <span class="type">quint64</span><i> defaultOriginQuota</i>, <span class="type">quint64</span><i> totalSpaceNeeded</i>)</h3>
+<p>This signal is emitted whenever the web site is asking to store data to the application cache database databaseName and the quota allocated to that web site is exceeded.</p>
+<!-- @@@applicationCacheQuotaExceeded -->
+<!-- $$$bytesReceived[overload1]$$$bytesReceived -->
+<h3 class="fn" id="bytesReceived"><a name="bytesReceived"></a><span class="type">quint64</span> QWebPage::&#8203;<span class="name">bytesReceived</span>() const</h3>
+<p>Returns the number of bytes that were received from the network to render the current page.</p>
+<p><b>See also </b><a href="qwebpage.html#totalBytes">totalBytes</a>() and <a href="qwebpage.html#loadProgress">loadProgress</a>().</p>
+<!-- @@@bytesReceived -->
+<!-- $$$chooseFile[overload1]$$$chooseFileQWebFrame*constQString& -->
+<h3 class="fn" id="chooseFile"><a name="chooseFile"></a><code>[virtual protected] </code><span class="type">QString</span> QWebPage::&#8203;<span class="name">chooseFile</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> parentFrame</i>, const <span class="type">QString</span> &amp;<i> suggestedFile</i>)</h3>
+<p>This function is called when the web content requests a file name, for example as a result of the user clicking on a &quot;file upload&quot; button in a HTML form.</p>
+<p>A suggested filename may be provided in <i>suggestedFile</i>. The frame originating the request is provided as <i>parentFrame</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#Extension-enum">ChooseMultipleFilesExtension</a>.</p>
+<!-- @@@chooseFile -->
+<!-- $$$consoleMessageReceived[overload1]$$$consoleMessageReceivedMessageSourceMessageLevelconstQString&intconstQString& -->
+<h3 class="fn" id="consoleMessageReceived"><a name="consoleMessageReceived"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">consoleMessageReceived</span>(<span class="type"><a href="qwebpage.html#MessageSource-enum">MessageSource</a></span><i> source</i>, <span class="type"><a href="qwebpage.html#MessageLevel-enum">MessageLevel</a></span><i> level</i>, const <span class="type">QString</span> &amp;<i> message</i>, <span class="type">int</span><i> lineNumber</i>, const <span class="type">QString</span> &amp;<i> sourceID</i>)</h3>
+<!-- @@@consoleMessageReceived -->
+<!-- $$$contentsChanged[overload1]$$$contentsChanged -->
+<h3 class="fn" id="contentsChanged"><a name="contentsChanged"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">contentsChanged</span>()</h3>
+<p>This signal is emitted whenever the text in form elements changes as well as other editable content.</p>
+<p>This function was introduced in  Qt 4.5.</p>
+<p><b>See also </b><a href="qwebpage.html#contentEditable-prop">contentEditable</a>, <a href="qwebpage.html#modified-prop">modified</a>, <a href="qwebframe.html#toHtml">QWebFrame::toHtml</a>(), and <a href="qwebframe.html#toPlainText">QWebFrame::toPlainText</a>().</p>
+<!-- @@@contentsChanged -->
+<!-- $$$createPlugin[overload1]$$$createPluginconstQString&constQUrl&constQStringList&constQStringList& -->
+<h3 class="fn" id="createPlugin"><a name="createPlugin"></a><code>[virtual protected] </code><span class="type">QObject</span> * QWebPage::&#8203;<span class="name">createPlugin</span>(const <span class="type">QString</span> &amp;<i> classid</i>, const <span class="type">QUrl</span> &amp;<i> url</i>, const <span class="type">QStringList</span> &amp;<i> paramNames</i>, const <span class="type">QStringList</span> &amp;<i> paramValues</i>)</h3>
+<p>This function is called whenever <a href="qwebpage.html#ErrorDomain-enum">WebKit</a> encounters a HTML object element with type &quot;application/x-qt-plugin&quot;. It is called regardless of the value of <a href="qwebsettings.html#WebAttribute-enum">QWebSettings::PluginsEnabled</a>. The <i>classid</i>, <i>url</i>, <i>paramNames</i> and <i>paramValues</i> correspond to the HTML object element attributes and child elements to configure the embeddable object.</p>
+<!-- @@@createPlugin -->
+<!-- $$$createStandardContextMenu[overload1]$$$createStandardContextMenu -->
+<h3 class="fn" id="createStandardContextMenu"><a name="createStandardContextMenu"></a><span class="type">QMenu</span> * QWebPage::&#8203;<span class="name">createStandardContextMenu</span>()</h3>
+<p>This function creates the standard context menu which is shown when the user clicks on the web page with the right mouse button. It is called from the default contextMenuEvent() handler. The popup menu's ownership is transferred to the caller.</p>
+<p>This function was introduced in  Qt 4.5.</p>
+<!-- @@@createStandardContextMenu -->
+<!-- $$$createWindow[overload1]$$$createWindowWebWindowType -->
+<h3 class="fn" id="createWindow"><a name="createWindow"></a><code>[virtual protected] </code><span class="type"><a href="qwebpage.html#QWebPage">QWebPage</a></span> * QWebPage::&#8203;<span class="name">createWindow</span>(<span class="type"><a href="qwebpage.html#WebWindowType-enum">WebWindowType</a></span><i> type</i>)</h3>
+<p>This function is called whenever <a href="qwebpage.html#ErrorDomain-enum">WebKit</a> wants to create a new window of the given <i>type</i>, for example when a JavaScript program requests to open a document in a new window.</p>
+<p>If the new window can be created, the new window's <a href="qwebpage.html">QWebPage</a> is returned; otherwise a null pointer is returned.</p>
+<p>If the view associated with the web page is a <a href="qwebview.html">QWebView</a> object, then the default implementation forwards the request to <a href="qwebview.html">QWebView</a>'s createWindow() function; otherwise it returns a null pointer.</p>
+<p>If <i>type</i> is <a href="qwebpage.html#WebWindowType-enum">WebModalDialog</a>, the application must call setWindowModality(Qt::ApplicationModal) on the new window.</p>
+<p><b>Note: </b>In the cases when the window creation is being triggered by JavaScript, apart from reimplementing this method application must also set the JavaScriptCanOpenWindows attribute of <a href="qwebsettings.html">QWebSettings</a> to true in order for it to get called.</p><p><b>See also </b><a href="qwebpage.html#acceptNavigationRequest">acceptNavigationRequest</a>() and <a href="qwebview.html#createWindow">QWebView::createWindow</a>().</p>
+<!-- @@@createWindow -->
+<!-- $$$currentFrame[overload1]$$$currentFrame -->
+<h3 class="fn" id="currentFrame"><a name="currentFrame"></a><span class="type"><a href="qwebframe.html">QWebFrame</a></span> * QWebPage::&#8203;<span class="name">currentFrame</span>() const</h3>
+<p>Returns the frame currently active.</p>
+<p><b>See also </b><a href="qwebpage.html#mainFrame">mainFrame</a>() and <a href="qwebpage.html#frameCreated">frameCreated</a>().</p>
+<!-- @@@currentFrame -->
+<!-- $$$customAction[overload1]$$$customActionint -->
+<h3 class="fn" id="customAction"><a name="customAction"></a><span class="type">QAction</span> * QWebPage::&#8203;<span class="name">customAction</span>(<span class="type">int</span><i> action</i>) const</h3>
+<!-- @@@customAction -->
+<!-- $$$databaseQuotaExceeded[overload1]$$$databaseQuotaExceededQWebFrame*QString -->
+<h3 class="fn" id="databaseQuotaExceeded"><a name="databaseQuotaExceeded"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">databaseQuotaExceeded</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, <span class="type">QString</span><i> databaseName</i>)</h3>
+<p>This signal is emitted whenever the web site shown in <i>frame</i> is asking to store data to the database <i>databaseName</i> and the quota allocated to that web site is exceeded.</p>
+<p>This function was introduced in  Qt 4.5.</p>
+<p><b>See also </b><a href="qwebdatabase.html">QWebDatabase</a>.</p>
+<!-- @@@databaseQuotaExceeded -->
+<!-- $$$devicePixelRatio[overload1]$$$devicePixelRatio -->
+<h3 class="fn" id="devicePixelRatio"><a name="devicePixelRatio"></a><span class="type">qreal</span> QWebPage::&#8203;<span class="name">devicePixelRatio</span>() const</h3>
+<p><b>See also </b><a href="qwebpage.html#setDevicePixelRatio">setDevicePixelRatio</a>().</p>
+<!-- @@@devicePixelRatio -->
+<!-- $$$downloadRequested[overload1]$$$downloadRequestedconstQNetworkRequest& -->
+<h3 class="fn" id="downloadRequested"><a name="downloadRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">downloadRequested</span>(const <span class="type">QNetworkRequest</span> &amp;<i> request</i>)</h3>
+<p>This signal is emitted when the user decides to download a link. The url of the link as well as additional meta-information is contained in <i>request</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#unsupportedContent">unsupportedContent</a>().</p>
+<!-- @@@downloadRequested -->
+<!-- $$$event[overload1]$$$eventQEvent* -->
+<h3 class="fn" id="event"><a name="event"></a><span class="type">bool</span> QWebPage::&#8203;<span class="name">event</span>(<span class="type">QEvent</span> *<i> ev</i>)</h3>
+<!-- @@@event -->
+<!-- $$$extension[overload1]$$$extensionExtensionconstExtensionOption*ExtensionReturn* -->
+<h3 class="fn" id="extension"><a name="extension"></a><code>[virtual] </code><span class="type">bool</span> QWebPage::&#8203;<span class="name">extension</span>(<span class="type"><a href="qwebpage.html#Extension-enum">Extension</a></span><i> extension</i>, const <span class="type"><a href="qwebpage-extensionoption.html">ExtensionOption</a></span> *<i> option</i> = Q_NULLPTR, <span class="type"><a href="qwebpage-extensionreturn.html">ExtensionReturn</a></span> *<i> output</i> = Q_NULLPTR)</h3>
+<p>This virtual function can be reimplemented in a <a href="qwebpage.html">QWebPage</a> subclass to provide support for extensions. The <i>option</i> argument is provided as input to the extension; the output results can be stored in <i>output</i>.</p>
+<p>The behavior of this function is determined by <i>extension</i>. The <i>option</i> and <i>output</i> values are typically casted to the corresponding types (for example, <a href="qwebpage-choosemultiplefilesextensionoption.html">ChooseMultipleFilesExtensionOption</a> and <a href="qwebpage-choosemultiplefilesextensionreturn.html">ChooseMultipleFilesExtensionReturn</a> for <a href="qwebpage.html#Extension-enum">ChooseMultipleFilesExtension</a>).</p>
+<p>You can call <a href="qwebpage.html#supportsExtension">supportsExtension</a>() to check if an extension is supported by the page.</p>
+<p>Returns true if the extension was called successfully; otherwise returns false.</p>
+<p><b>See also </b><a href="qwebpage.html#supportsExtension">supportsExtension</a>() and <a href="qwebpage.html#Extension-enum">Extension</a>.</p>
+<!-- @@@extension -->
+<!-- $$$featurePermissionRequestCanceled[overload1]$$$featurePermissionRequestCanceledQWebFrame*QWebPage::Feature -->
+<h3 class="fn" id="featurePermissionRequestCanceled"><a name="featurePermissionRequestCanceled"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">featurePermissionRequestCanceled</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, <span class="type"><a href="qwebpage.html#Feature-enum">QWebPage::Feature</a></span><i> feature</i>)</h3>
+<p>This is signal is emitted when the given <i>frame</i> cancels a previously issued request to make use of <i>feature</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#featurePermissionRequested">featurePermissionRequested</a>() and <a href="qwebpage.html#setFeaturePermission">setFeaturePermission</a>().</p>
+<!-- @@@featurePermissionRequestCanceled -->
+<!-- $$$featurePermissionRequested[overload1]$$$featurePermissionRequestedQWebFrame*QWebPage::Feature -->
+<h3 class="fn" id="featurePermissionRequested"><a name="featurePermissionRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">featurePermissionRequested</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, <span class="type"><a href="qwebpage.html#Feature-enum">QWebPage::Feature</a></span><i> feature</i>)</h3>
+<p>This is signal is emitted when the given <i>frame</i> requests to make use of the resource or device identified by <i>feature</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#featurePermissionRequestCanceled">featurePermissionRequestCanceled</a>() and <a href="qwebpage.html#setFeaturePermission">setFeaturePermission</a>().</p>
+<!-- @@@featurePermissionRequested -->
+<!-- $$$findText[overload1]$$$findTextconstQString&FindFlags -->
+<h3 class="fn" id="findText"><a name="findText"></a><span class="type">bool</span> QWebPage::&#8203;<span class="name">findText</span>(const <span class="type">QString</span> &amp;<i> subString</i>, <span class="type"><a href="qwebpage.html#FindFlag-enum">FindFlags</a></span><i> options</i> = FindFlags())</h3>
+<p>Finds the specified string, <i>subString</i>, in the page, using the given <i>options</i>.</p>
+<p>If the <a href="qwebpage.html#FindFlag-enum">HighlightAllOccurrences</a> flag is passed, the function will highlight all occurrences that exist in the page. All subsequent calls will extend the highlight, rather than replace it, with occurrences of the new string.</p>
+<p>If the <a href="qwebpage.html#FindFlag-enum">HighlightAllOccurrences</a> flag is not passed, the function will select an occurrence and all subsequent calls will replace the current occurrence with the next one.</p>
+<p>To clear the selection, just pass an empty string.</p>
+<p>Returns true if <i>subString</i> was found; otherwise returns false.</p>
+<!-- @@@findText -->
+<!-- $$$focusNextPrevChild[overload1]$$$focusNextPrevChildbool -->
+<h3 class="fn" id="focusNextPrevChild"><a name="focusNextPrevChild"></a><span class="type">bool</span> QWebPage::&#8203;<span class="name">focusNextPrevChild</span>(<span class="type">bool</span><i> next</i>)</h3>
+<p>Similar to QWidget::focusNextPrevChild() it focuses the next focusable web element if <i>next</i> is true; otherwise the previous element is focused.</p>
+<p>Returns true if it can find a new focusable element, or false if it can't.</p>
+<!-- @@@focusNextPrevChild -->
+<!-- $$$focusedElementChanged[overload1]$$$focusedElementChangedconstQWebElement& -->
+<h3 class="fn" id="focusedElementChanged"><a name="focusedElementChanged"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">focusedElementChanged</span>(const <span class="type"><a href="qwebelement.html">QWebElement</a></span> &amp;<i> element</i>)</h3>
+<!-- @@@focusedElementChanged -->
+<!-- $$$frameAt[overload1]$$$frameAtconstQPoint& -->
+<h3 class="fn" id="frameAt"><a name="frameAt"></a><span class="type"><a href="qwebframe.html">QWebFrame</a></span> * QWebPage::&#8203;<span class="name">frameAt</span>(const <span class="type">QPoint</span> &amp;<i> pos</i>) const</h3>
+<p>Returns the frame at the given point <i>pos</i>, or 0 if there is no frame at that position.</p>
+<p>This function was introduced in  Qt 4.6.</p>
+<p><b>See also </b><a href="qwebpage.html#mainFrame">mainFrame</a>() and <a href="qwebpage.html#currentFrame">currentFrame</a>().</p>
+<!-- @@@frameAt -->
+<!-- $$$frameCreated[overload1]$$$frameCreatedQWebFrame* -->
+<h3 class="fn" id="frameCreated"><a name="frameCreated"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">frameCreated</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>)</h3>
+<p>This signal is emitted whenever the page creates a new <i>frame</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#currentFrame">currentFrame</a>().</p>
+<!-- @@@frameCreated -->
+<!-- $$$fullScreenRequested[overload1]$$$fullScreenRequestedQWebFullScreenRequest -->
+<h3 class="fn" id="fullScreenRequested"><a name="fullScreenRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">fullScreenRequested</span>(<span class="type">QWebFullScreenRequest</span><i> fullScreenRequest</i>)</h3>
+<!-- @@@fullScreenRequested -->
+<!-- $$$geometryChangeRequested[overload1]$$$geometryChangeRequestedconstQRect& -->
+<h3 class="fn" id="geometryChangeRequested"><a name="geometryChangeRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">geometryChangeRequested</span>(const <span class="type">QRect</span> &amp;<i> geom</i>)</h3>
+<p>This signal is emitted whenever the document wants to change the position and size of the page to <i>geom</i>. This can happen for example through JavaScript.</p>
+<!-- @@@geometryChangeRequested -->
+<!-- $$$history[overload1]$$$history -->
+<h3 class="fn" id="history"><a name="history"></a><span class="type"><a href="qwebhistory.html">QWebHistory</a></span> * QWebPage::&#8203;<span class="name">history</span>() const</h3>
+<p>Returns a pointer to the view's history of navigated web pages.</p>
+<!-- @@@history -->
+<!-- $$$inputMethodQuery[overload1]$$$inputMethodQueryQt::InputMethodQuery -->
+<h3 class="fn" id="inputMethodQuery"><a name="inputMethodQuery"></a><span class="type">QVariant</span> QWebPage::&#8203;<span class="name">inputMethodQuery</span>(<span class="type">Qt::InputMethodQuery</span><i> property</i>) const</h3>
+<p>This method is used by the input method to query a set of properties of the page to be able to support complex input method operations as support for surrounding text and reconversions.</p>
+<p><i>property</i> specifies which property is queried.</p>
+<p><b>See also </b>QWidget::inputMethodEvent() and QInputMethodEvent.</p>
+<!-- @@@inputMethodQuery -->
+<!-- $$$javaScriptAlert[overload1]$$$javaScriptAlertQWebFrame*constQString& -->
+<h3 class="fn" id="javaScriptAlert"><a name="javaScriptAlert"></a><code>[virtual protected] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">javaScriptAlert</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, const <span class="type">QString</span> &amp;<i> msg</i>)</h3>
+<p>This function is called whenever a JavaScript program running inside <i>frame</i> calls the alert() function with the message <i>msg</i>.</p>
+<p>The default implementation shows the message, <i>msg</i>, with QMessageBox::information.</p>
+<!-- @@@javaScriptAlert -->
+<!-- $$$javaScriptConfirm[overload1]$$$javaScriptConfirmQWebFrame*constQString& -->
+<h3 class="fn" id="javaScriptConfirm"><a name="javaScriptConfirm"></a><code>[virtual protected] </code><span class="type">bool</span> QWebPage::&#8203;<span class="name">javaScriptConfirm</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, const <span class="type">QString</span> &amp;<i> msg</i>)</h3>
+<p>This function is called whenever a JavaScript program running inside <i>frame</i> calls the confirm() function with the message, <i>msg</i>. Returns true if the user confirms the message; otherwise returns false.</p>
+<p>The default implementation executes the query using QMessageBox::information with QMessageBox::Ok and QMessageBox::Cancel buttons.</p>
+<!-- @@@javaScriptConfirm -->
+<!-- $$$javaScriptConsoleMessage[overload1]$$$javaScriptConsoleMessageconstQString&intconstQString& -->
+<h3 class="fn" id="javaScriptConsoleMessage"><a name="javaScriptConsoleMessage"></a><code>[virtual protected] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">javaScriptConsoleMessage</span>(const <span class="type">QString</span> &amp;<i> message</i>, <span class="type">int</span><i> lineNumber</i>, const <span class="type">QString</span> &amp;<i> sourceID</i>)</h3>
+<p>This function is called whenever a JavaScript program tries to print a <i>message</i> to the web browser's console.</p>
+<p>For example in case of evaluation errors the source URL may be provided in <i>sourceID</i> as well as the <i>lineNumber</i>.</p>
+<p>The default implementation prints nothing.</p>
+<!-- @@@javaScriptConsoleMessage -->
+<!-- $$$javaScriptPrompt[overload1]$$$javaScriptPromptQWebFrame*constQString&constQString&QString* -->
+<h3 class="fn" id="javaScriptPrompt"><a name="javaScriptPrompt"></a><code>[virtual protected] </code><span class="type">bool</span> QWebPage::&#8203;<span class="name">javaScriptPrompt</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, const <span class="type">QString</span> &amp;<i> msg</i>, const <span class="type">QString</span> &amp;<i> defaultValue</i>, <span class="type">QString</span> *<i> result</i>)</h3>
+<p>This function is called whenever a JavaScript program running inside <i>frame</i> tries to prompt the user for input. The program may provide an optional message, <i>msg</i>, as well as a default value for the input in <i>defaultValue</i>.</p>
+<p>If the prompt was cancelled by the user the implementation should return false; otherwise the result should be written to <i>result</i> and true should be returned. If the prompt was not cancelled by the user, the implementation should return true and the result string must not be null.</p>
+<p>The default implementation uses QInputDialog::getText().</p>
+<!-- @@@javaScriptPrompt -->
+<!-- $$$linkClicked[overload1]$$$linkClickedconstQUrl& -->
+<h3 class="fn" id="linkClicked"><a name="linkClicked"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">linkClicked</span>(const <span class="type">QUrl</span> &amp;<i> url</i>)</h3>
+<p>This signal is emitted whenever the user clicks on a link and the page's <a href="qwebpage.html#linkDelegationPolicy-prop">linkDelegationPolicy</a> property is set to delegate the link handling for the specified <i>url</i>.</p>
+<p>By default no links are delegated and are handled by <a href="qwebpage.html">QWebPage</a> instead.</p>
+<p><b>Note: </b>This signal possibly won't be emitted for clicked links which use JavaScript to trigger navigation.</p><p><b>See also </b><a href="qwebpage.html#linkHovered">linkHovered</a>().</p>
+<!-- @@@linkClicked -->
+<!-- $$$linkHovered[overload1]$$$linkHoveredconstQString&constQString&constQString& -->
+<h3 class="fn" id="linkHovered"><a name="linkHovered"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">linkHovered</span>(const <span class="type">QString</span> &amp;<i> link</i>, const <span class="type">QString</span> &amp;<i> title</i>, const <span class="type">QString</span> &amp;<i> textContent</i>)</h3>
+<p>This signal is emitted when the mouse hovers over a link.</p>
+<p><i>link</i> contains the link url. <i>title</i> is the link element's title, if it is specified in the markup. <i>textContent</i> provides text within the link element, e.g&#x2e;, text inside an HTML anchor tag.</p>
+<p>When the mouse leaves the link element the signal is emitted with empty parameters.</p>
+<p><b>See also </b><a href="qwebpage.html#linkClicked">linkClicked</a>().</p>
+<!-- @@@linkHovered -->
+<!-- $$$loadFinished[overload1]$$$loadFinishedbool -->
+<h3 class="fn" id="loadFinished"><a name="loadFinished"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">loadFinished</span>(<span class="type">bool</span><i> ok</i>)</h3>
+<p>This signal is emitted when the page finishes loading content. This signal is independant of script execution or page rendering. <i>ok</i> will indicate whether the load was successful or any error occurred.</p>
+<p><b>See also </b><a href="qwebpage.html#loadStarted">loadStarted</a>() and <a href="qwebpage.html#Extension-enum">ErrorPageExtension</a>.</p>
+<!-- @@@loadFinished -->
+<!-- $$$loadProgress[overload1]$$$loadProgressint -->
+<h3 class="fn" id="loadProgress"><a name="loadProgress"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">loadProgress</span>(<span class="type">int</span><i> progress</i>)</h3>
+<p>This signal is emitted when the global progress status changes. The current value is provided by <i>progress</i> and scales from 0 to 100, which is the default range of QProgressBar. It accumulates changes from all the child frames.</p>
+<p><b>See also </b><a href="qwebpage.html#bytesReceived">bytesReceived</a>().</p>
+<!-- @@@loadProgress -->
+<!-- $$$loadStarted[overload1]$$$loadStarted -->
+<h3 class="fn" id="loadStarted"><a name="loadStarted"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">loadStarted</span>()</h3>
+<p>This signal is emitted when a page starts loading content.</p>
+<p><b>See also </b><a href="qwebpage.html#loadFinished">loadFinished</a>().</p>
+<!-- @@@loadStarted -->
+<!-- $$$mainFrame[overload1]$$$mainFrame -->
+<h3 class="fn" id="mainFrame"><a name="mainFrame"></a><span class="type"><a href="qwebframe.html">QWebFrame</a></span> * QWebPage::&#8203;<span class="name">mainFrame</span>() const</h3>
+<p>Returns the main frame of the page.</p>
+<p>The main frame provides access to the hierarchy of sub-frames and is also needed if you want to explicitly render a web page into a given painter.</p>
+<p><b>See also </b><a href="qwebpage.html#currentFrame">currentFrame</a>().</p>
+<!-- @@@mainFrame -->
+<!-- $$$menuBarVisibilityChangeRequested[overload1]$$$menuBarVisibilityChangeRequestedbool -->
+<h3 class="fn" id="menuBarVisibilityChangeRequested"><a name="menuBarVisibilityChangeRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">menuBarVisibilityChangeRequested</span>(<span class="type">bool</span><i> visible</i>)</h3>
+<p>This signal is emitted whenever the visibility of the menubar in a web browser window that hosts <a href="qwebpage.html">QWebPage</a> should be changed to <i>visible</i>.</p>
+<!-- @@@menuBarVisibilityChangeRequested -->
+<!-- $$$microFocusChanged[overload1]$$$microFocusChanged -->
+<h3 class="fn" id="microFocusChanged"><a name="microFocusChanged"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">microFocusChanged</span>()</h3>
+<p>This signal is emitted when for example the position of the cursor in an editable form element changes. It is used to inform input methods about the new on-screen position where the user is able to enter text. This signal is usually connected to the QWidget::updateMicroFocus() slot.</p>
+<!-- @@@microFocusChanged -->
+<!-- $$$networkAccessManager[overload1]$$$networkAccessManager -->
+<h3 class="fn" id="networkAccessManager"><a name="networkAccessManager"></a><span class="type">QNetworkAccessManager</span> * QWebPage::&#8203;<span class="name">networkAccessManager</span>() const</h3>
+<p>Returns the QNetworkAccessManager that is responsible for serving network requests for this <a href="qwebpage.html">QWebPage</a>.</p>
+<p><b>See also </b><a href="qwebpage.html#setNetworkAccessManager">setNetworkAccessManager</a>().</p>
+<!-- @@@networkAccessManager -->
+<!-- $$$pluginFactory[overload1]$$$pluginFactory -->
+<h3 class="fn" id="pluginFactory"><a name="pluginFactory"></a><span class="type"><a href="qwebpluginfactory.html">QWebPluginFactory</a></span> * QWebPage::&#8203;<span class="name">pluginFactory</span>() const</h3>
+<p>Returns the <a href="qwebpluginfactory.html">QWebPluginFactory</a> that is responsible for creating plugins embedded into this <a href="qwebpage.html">QWebPage</a>. If no plugin factory is installed a null pointer is returned.</p>
+<p><b>See also </b><a href="qwebpage.html#setPluginFactory">setPluginFactory</a>().</p>
+<!-- @@@pluginFactory -->
+<!-- $$$printRequested[overload1]$$$printRequestedQWebFrame* -->
+<h3 class="fn" id="printRequested"><a name="printRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">printRequested</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>)</h3>
+<p>This signal is emitted whenever the page requests the web browser to print <i>frame</i>, for example through the JavaScript <code>window.print()</code> call.</p>
+<p><b>See also </b><a href="qwebframe.html#print">QWebFrame::print</a>() and QPrintPreviewDialog.</p>
+<!-- @@@printRequested -->
+<!-- $$$repaintRequested[overload1]$$$repaintRequestedconstQRect& -->
+<h3 class="fn" id="repaintRequested"><a name="repaintRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">repaintRequested</span>(const <span class="type">QRect</span> &amp;<i> dirtyRect</i>)</h3>
+<p>This signal is emitted whenever this <a href="qwebpage.html">QWebPage</a> should be updated. It's useful when rendering a <a href="qwebpage.html">QWebPage</a> without a <a href="qwebview.html">QWebView</a> or <a href="qgraphicswebview.html">QGraphicsWebView</a>. <i>dirtyRect</i> contains the area that needs to be updated. To paint the <a href="qwebpage.html">QWebPage</a> get the <a href="qwebpage.html#mainFrame">mainFrame</a>() and call the render(QPainter*, const QRegion&amp;) method with the <i>dirtyRect</i> as the second parameter.</p>
+<p><b>See also </b><a href="qwebpage.html#mainFrame">mainFrame</a>() and <a href="qwebpage.html#view">view</a>().</p>
+<!-- @@@repaintRequested -->
+<!-- $$$resetDevicePixelRatio[overload1]$$$resetDevicePixelRatio -->
+<h3 class="fn" id="resetDevicePixelRatio"><a name="resetDevicePixelRatio"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">resetDevicePixelRatio</span>()</h3>
+<!-- @@@resetDevicePixelRatio -->
+<!-- $$$restoreFrameStateRequested[overload1]$$$restoreFrameStateRequestedQWebFrame* -->
+<h3 class="fn" id="restoreFrameStateRequested"><a name="restoreFrameStateRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">restoreFrameStateRequested</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>)</h3>
+<p>This signal is emitted when the load of <i>frame</i> is finished and the application may now update its state accordingly.</p>
+<p>This function was introduced in  Qt 4.5.</p>
+<!-- @@@restoreFrameStateRequested -->
+<!-- $$$saveFrameStateRequested[overload1]$$$saveFrameStateRequestedQWebFrame*QWebHistoryItem* -->
+<h3 class="fn" id="saveFrameStateRequested"><a name="saveFrameStateRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">saveFrameStateRequested</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, <span class="type"><a href="qwebhistoryitem.html">QWebHistoryItem</a></span> *<i> item</i>)</h3>
+<p>This signal is emitted shortly before the history of navigated pages in <i>frame</i> is changed, for example when navigating back in the history.</p>
+<p>The provided <a href="qwebhistoryitem.html">QWebHistoryItem</a>, <i>item</i>, holds the history entry of the frame before the change.</p>
+<p>A potential use-case for this signal is to store custom data in the <a href="qwebhistoryitem.html">QWebHistoryItem</a> associated to the frame, using <a href="qwebhistoryitem.html#setUserData">QWebHistoryItem::setUserData</a>().</p>
+<p>This function was introduced in  Qt 4.5.</p>
+<!-- @@@saveFrameStateRequested -->
+<!-- $$$scrollRequested[overload1]$$$scrollRequestedintintconstQRect& -->
+<h3 class="fn" id="scrollRequested"><a name="scrollRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">scrollRequested</span>(<span class="type">int</span><i> dx</i>, <span class="type">int</span><i> dy</i>, const <span class="type">QRect</span> &amp;<i> rectToScroll</i>)</h3>
+<p>This signal is emitted whenever the content given by <i>rectToScroll</i> needs to be scrolled <i>dx</i> and <i>dy</i> downwards.</p>
+<!-- @@@scrollRequested -->
+<!-- $$$selectionChanged[overload1]$$$selectionChanged -->
+<h3 class="fn" id="selectionChanged"><a name="selectionChanged"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">selectionChanged</span>()</h3>
+<p>This signal is emitted whenever the selection changes, either interactively or programmatically (e.g&#x2e; by calling <a href="qwebpage.html#triggerAction">triggerAction</a>() with a selection action).</p>
+<p><b>See also </b><a href="qwebpage.html#selectedText-prop">selectedText</a>().</p>
+<!-- @@@selectionChanged -->
+<!-- $$$setActualVisibleContentRect[overload1]$$$setActualVisibleContentRectconstQRect& -->
+<h3 class="fn" id="setActualVisibleContentRect"><a name="setActualVisibleContentRect"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">setActualVisibleContentRect</span>(const <span class="type">QRect</span> &amp;<i> rect</i>) const</h3>
+<!-- @@@setActualVisibleContentRect -->
+<!-- $$$setDevicePixelRatio[overload1]$$$setDevicePixelRatioqreal -->
+<h3 class="fn" id="setDevicePixelRatio"><a name="setDevicePixelRatio"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">setDevicePixelRatio</span>(<span class="type">qreal</span><i> ratio</i>)</h3>
+<p><b>See also </b><a href="qwebpage.html#devicePixelRatio">devicePixelRatio</a>().</p>
+<!-- @@@setDevicePixelRatio -->
+<!-- $$$setFeaturePermission[overload1]$$$setFeaturePermissionQWebFrame*FeaturePermissionPolicy -->
+<h3 class="fn" id="setFeaturePermission"><a name="setFeaturePermission"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">setFeaturePermission</span>(<span class="type"><a href="qwebframe.html">QWebFrame</a></span> *<i> frame</i>, <span class="type"><a href="qwebpage.html#Feature-enum">Feature</a></span><i> feature</i>, <span class="type"><a href="qwebpage.html#PermissionPolicy-enum">PermissionPolicy</a></span><i> policy</i>)</h3>
+<p>Sets the permission for the given <i>frame</i> to use <i>feature</i> to <i>policy</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#featurePermissionRequested">featurePermissionRequested</a>() and <a href="qwebpage.html#featurePermissionRequestCanceled">featurePermissionRequestCanceled</a>().</p>
+<!-- @@@setFeaturePermission -->
+<!-- $$$setNetworkAccessManager[overload1]$$$setNetworkAccessManagerQNetworkAccessManager* -->
+<h3 class="fn" id="setNetworkAccessManager"><a name="setNetworkAccessManager"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">setNetworkAccessManager</span>(<span class="type">QNetworkAccessManager</span> *<i> manager</i>)</h3>
+<p>Sets the QNetworkAccessManager <i>manager</i> responsible for serving network requests for this <a href="qwebpage.html">QWebPage</a>.</p>
+<p><b>Note: </b>It is currently not supported to change the network access manager after the <a href="qwebpage.html">QWebPage</a> has used it. The results of doing this are undefined.</p><p><b>See also </b><a href="qwebpage.html#networkAccessManager">networkAccessManager</a>().</p>
+<!-- @@@setNetworkAccessManager -->
+<!-- $$$setPluginFactory[overload1]$$$setPluginFactoryQWebPluginFactory* -->
+<h3 class="fn" id="setPluginFactory"><a name="setPluginFactory"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">setPluginFactory</span>(<span class="type"><a href="qwebpluginfactory.html">QWebPluginFactory</a></span> *<i> factory</i>)</h3>
+<p>Sets the <a href="qwebpluginfactory.html">QWebPluginFactory</a> <i>factory</i> responsible for creating plugins embedded into this <a href="qwebpage.html">QWebPage</a>.</p>
+<p>Note: The plugin factory is only used if the <a href="qwebsettings.html#WebAttribute-enum">QWebSettings::PluginsEnabled</a> attribute is enabled.</p>
+<p><b>See also </b><a href="qwebpage.html#pluginFactory">pluginFactory</a>().</p>
+<!-- @@@setPluginFactory -->
+<!-- $$$setView[overload1]$$$setViewQWidget* -->
+<h3 class="fn" id="setView"><a name="setView"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">setView</span>(<span class="type">QWidget</span> *<i> view</i>)</h3>
+<p>Sets the <i>view</i> that is associated with the web page.</p>
+<p><b>See also </b><a href="qwebpage.html#view">view</a>().</p>
+<!-- @@@setView -->
+<!-- $$$settings[overload1]$$$settings -->
+<h3 class="fn" id="settings"><a name="settings"></a><span class="type"><a href="qwebsettings.html">QWebSettings</a></span> * QWebPage::&#8203;<span class="name">settings</span>() const</h3>
+<p>Returns a pointer to the page's settings object.</p>
+<p><b>See also </b><a href="qwebsettings.html#globalSettings">QWebSettings::globalSettings</a>().</p>
+<!-- @@@settings -->
+<!-- $$$shouldInterruptJavaScript[overload1]$$$shouldInterruptJavaScript -->
+<h3 class="fn" id="shouldInterruptJavaScript"><a name="shouldInterruptJavaScript"></a><code>[virtual] </code><span class="type">bool</span> QWebPage::&#8203;<span class="name">shouldInterruptJavaScript</span>()</h3>
+<p>This function is called when a JavaScript program is running for a long period of time.</p>
+<p>If the user wanted to stop the JavaScript the implementation should return true; otherwise false.</p>
+<p>The default implementation executes the query using QMessageBox::information with QMessageBox::Yes and QMessageBox::No buttons.</p>
+<p>This function was introduced in  Qt 4.6.</p>
+<!-- @@@shouldInterruptJavaScript -->
+<!-- $$$statusBarMessage[overload1]$$$statusBarMessageconstQString& -->
+<h3 class="fn" id="statusBarMessage"><a name="statusBarMessage"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">statusBarMessage</span>(const <span class="type">QString</span> &amp;<i> text</i>)</h3>
+<p>This signal is emitted when the statusbar <i>text</i> is changed by the page.</p>
+<!-- @@@statusBarMessage -->
+<!-- $$$statusBarVisibilityChangeRequested[overload1]$$$statusBarVisibilityChangeRequestedbool -->
+<h3 class="fn" id="statusBarVisibilityChangeRequested"><a name="statusBarVisibilityChangeRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">statusBarVisibilityChangeRequested</span>(<span class="type">bool</span><i> visible</i>)</h3>
+<p>This signal is emitted whenever the visibility of the statusbar in a web browser window that hosts <a href="qwebpage.html">QWebPage</a> should be changed to <i>visible</i>.</p>
+<!-- @@@statusBarVisibilityChangeRequested -->
+<!-- $$$supportedContentTypes[overload1]$$$supportedContentTypes -->
+<h3 class="fn" id="supportedContentTypes"><a name="supportedContentTypes"></a><span class="type">QStringList</span> QWebPage::&#8203;<span class="name">supportedContentTypes</span>() const</h3>
+<p>Returns the list of all content types supported by <a href="qwebpage.html">QWebPage</a>.</p>
+<!-- @@@supportedContentTypes -->
+<!-- $$$supportsContentType[overload1]$$$supportsContentTypeconstQString& -->
+<h3 class="fn" id="supportsContentType"><a name="supportsContentType"></a><span class="type">bool</span> QWebPage::&#8203;<span class="name">supportsContentType</span>(const <span class="type">QString</span> &amp;<i> mimeType</i>) const</h3>
+<p>Returns true if <a href="qwebpage.html">QWebPage</a> can handle the given <i>mimeType</i>; otherwise, returns false.</p>
+<!-- @@@supportsContentType -->
+<!-- $$$supportsExtension[overload1]$$$supportsExtensionExtension -->
+<h3 class="fn" id="supportsExtension"><a name="supportsExtension"></a><code>[virtual] </code><span class="type">bool</span> QWebPage::&#8203;<span class="name">supportsExtension</span>(<span class="type"><a href="qwebpage.html#Extension-enum">Extension</a></span><i> extension</i>) const</h3>
+<p>This virtual function returns true if the web page supports <i>extension</i>; otherwise false is returned.</p>
+<p><b>See also </b><a href="qwebpage.html#extension">extension</a>().</p>
+<!-- @@@supportsExtension -->
+<!-- $$$swallowContextMenuEvent[overload1]$$$swallowContextMenuEventQContextMenuEvent* -->
+<h3 class="fn" id="swallowContextMenuEvent"><a name="swallowContextMenuEvent"></a><span class="type">bool</span> QWebPage::&#8203;<span class="name">swallowContextMenuEvent</span>(<span class="type">QContextMenuEvent</span> *<i> event</i>)</h3>
+<p>Filters the context menu event, <i>event</i>, through handlers for scrollbars and custom event handlers in the web page. Returns true if the event was handled; otherwise false.</p>
+<p>A web page may swallow a context menu event through a custom event handler, allowing for context menus to be implemented in HTML/JavaScript. This is used by <a href="http://maps.google.com/">Google Maps</a>, for example.</p>
+<!-- @@@swallowContextMenuEvent -->
+<!-- $$$toolBarVisibilityChangeRequested[overload1]$$$toolBarVisibilityChangeRequestedbool -->
+<h3 class="fn" id="toolBarVisibilityChangeRequested"><a name="toolBarVisibilityChangeRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">toolBarVisibilityChangeRequested</span>(<span class="type">bool</span><i> visible</i>)</h3>
+<p>This signal is emitted whenever the visibility of the toolbar in a web browser window that hosts <a href="qwebpage.html">QWebPage</a> should be changed to <i>visible</i>.</p>
+<!-- @@@toolBarVisibilityChangeRequested -->
+<!-- $$$totalBytes[overload1]$$$totalBytes -->
+<h3 class="fn" id="totalBytes"><a name="totalBytes"></a><span class="type">quint64</span> QWebPage::&#8203;<span class="name">totalBytes</span>() const</h3>
+<p>Returns the total number of bytes that were received from the network to render the current page, including extra content such as embedded images.</p>
+<p><b>See also </b><a href="qwebpage.html#bytesReceived">bytesReceived</a>().</p>
+<!-- @@@totalBytes -->
+<!-- $$$triggerAction[overload1]$$$triggerActionWebActionbool -->
+<h3 class="fn" id="triggerAction"><a name="triggerAction"></a><code>[virtual] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">triggerAction</span>(<span class="type"><a href="qwebpage.html#WebAction-enum">WebAction</a></span><i> action</i>, <span class="type">bool</span><i> checked</i> = false)</h3>
+<p>This function can be called to trigger the specified <i>action</i>. It is also called by Qt <a href="qwebpage.html#ErrorDomain-enum">WebKit</a> if the user triggers the action, for example through a context menu item.</p>
+<p>If <i>action</i> is a checkable action then <i>checked</i> specified whether the action is toggled or not.</p>
+<p><b>See also </b><a href="qwebpage.html#action">action</a>().</p>
+<!-- @@@triggerAction -->
+<!-- $$$undoStack[overload1]$$$undoStack -->
+<h3 class="fn" id="undoStack"><a name="undoStack"></a><span class="type">QUndoStack</span> * QWebPage::&#8203;<span class="name">undoStack</span>() const</h3>
+<p>Returns a pointer to the undo stack used for editable content.</p>
+<p><b>See also </b><a href="qwebpage.html#modified-prop">modified</a>.</p>
+<!-- @@@undoStack -->
+<!-- $$$unsupportedContent[overload1]$$$unsupportedContentQNetworkReply* -->
+<h3 class="fn" id="unsupportedContent"><a name="unsupportedContent"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">unsupportedContent</span>(<span class="type">QNetworkReply</span> *<i> reply</i>)</h3>
+<p>This signal is emitted when <a href="qwebpage.html#ErrorDomain-enum">WebKit</a> cannot handle a link the user navigated to or a web server's response includes a &quot;Content-Disposition&quot; header with the 'attachment' directive. If &quot;Content-Disposition&quot; is present in <i>reply</i>, the web server is indicating that the client should prompt the user to save the content regardless of content-type. See RFC 2616 sections 19.5&#x2e;1 for details about Content-Disposition.</p>
+<p>At signal emission time the meta-data of the QNetworkReply <i>reply</i> is available.</p>
+<p><b>Note: </b>The receiving slot is responsible for deleting the QNetworkReply <i>reply</i>.</p><p><b>Note: </b>This signal is only emitted if the <a href="qwebpage.html#forwardUnsupportedContent-prop">forwardUnsupportedContent</a> property is set to true.</p><p><b>See also </b><a href="qwebpage.html#downloadRequested">downloadRequested</a>().</p>
+<!-- @@@unsupportedContent -->
+<!-- $$$updatePositionDependentActions[overload1]$$$updatePositionDependentActionsconstQPoint& -->
+<h3 class="fn" id="updatePositionDependentActions"><a name="updatePositionDependentActions"></a><span class="type">void</span> QWebPage::&#8203;<span class="name">updatePositionDependentActions</span>(const <span class="type">QPoint</span> &amp;<i> pos</i>)</h3>
+<p>Updates the page's actions depending on the position <i>pos</i>. For example if <i>pos</i> is over an image element the <a href="qwebpage.html#WebAction-enum">CopyImageToClipboard</a> action is enabled.</p>
+<!-- @@@updatePositionDependentActions -->
+<!-- $$$userAgentForUrl[overload1]$$$userAgentForUrlconstQUrl& -->
+<h3 class="fn" id="userAgentForUrl"><a name="userAgentForUrl"></a><code>[virtual protected] </code><span class="type">QString</span> QWebPage::&#8203;<span class="name">userAgentForUrl</span>(const <span class="type">QUrl</span> &amp;<i> url</i>) const</h3>
+<p>This function is called when a user agent for HTTP requests is needed. You can reimplement this function to dynamically return different user agents for different URLs, based on the <i>url</i> parameter.</p>
+<p>The default implementation returns the following value:</p>
+<p>&quot;Mozilla/5.0 (%Platform%%Security%%Subplatform%) AppleWebKit/%WebKitVersion% (KHTML, like Gecko) %AppVersion Safari/%WebKitVersion%&quot;</p>
+<p>In this string the following values are replaced at run-time:</p>
+<ul>
+<li>%Platform% expands to the windowing system followed by &quot;; &quot; if it is not Windows (e.g&#x2e; &quot;X11; &quot;).</li>
+<li>%Security% expands to &quot;N; &quot; if SSL is disabled.</li>
+<li>%Subplatform% expands to the operating system version (e.g&#x2e; &quot;Windows NT 6.1&quot; or &quot;Intel Mac OS X 10.5&quot;).</li>
+<li>%WebKitVersion% is the version of <a href="qwebpage.html#ErrorDomain-enum">WebKit</a> the application was compiled against.</li>
+<li>%AppVersion% expands to QCoreApplication::applicationName()/QCoreApplication::applicationVersion() if they're set; otherwise defaulting to Qt and the current Qt version.</li>
+</ul>
+<!-- @@@userAgentForUrl -->
+<!-- $$$view[overload1]$$$view -->
+<h3 class="fn" id="view"><a name="view"></a><span class="type">QWidget</span> * QWebPage::&#8203;<span class="name">view</span>() const</h3>
+<p>Returns the view widget that is associated with the web page.</p>
+<p><b>See also </b><a href="qwebpage.html#setView">setView</a>().</p>
+<!-- @@@view -->
+<!-- $$$viewportAttributesForSize[overload1]$$$viewportAttributesForSizeconstQSize& -->
+<h3 class="fn" id="viewportAttributesForSize"><a name="viewportAttributesForSize"></a><span class="type"><a href="qwebpage-viewportattributes.html">ViewportAttributes</a></span> QWebPage::&#8203;<span class="name">viewportAttributesForSize</span>(const <span class="type">QSize</span> &amp;<i> availableSize</i>) const</h3>
+<p>Computes the optimal viewport configuration given the <i>availableSize</i>, when user interface components are disregarded.</p>
+<p>The configuration is also dependent on the device screen size which is obtained automatically. For testing purposes the size can be overridden by setting two environment variables QTWEBKIT_DEVICE_WIDTH and QTWEBKIT_DEVICE_HEIGHT, which both needs to be set.</p>
+<p>The <a href="qwebpage-viewportattributes.html">ViewportAttributes</a> includes a pixel density ratio, which will also be exposed to the web author though the -webkit-pixel-ratio media feature. This is the ratio between 1 density-independent pixel (DPI) and physical pixels.</p>
+<p>A density-independent pixel is equivalent to one physical pixel on a 160 DPI screen, so on our platform assumes that as the baseline density.</p>
+<p>The conversion of DIP units to screen pixels is quite simple:</p>
+<p>pixels = DIPs * (density / 160).</p>
+<p>Thus, on a 240 DPI screen, 1 DIPs would equal 1.5 physical pixels.</p>
+<p>An invalid instance will be returned in the case an empty size is passed to the method.</p>
+<p><b>Note: </b>The density is automatically obtained from the DPI of the screen where the page is being shown, but as many X11 servers are reporting wrong DPI, it is possible to override it using QX11Info::setAppDpiY().</p><!-- @@@viewportAttributesForSize -->
+<!-- $$$viewportChangeRequested[overload1]$$$viewportChangeRequested -->
+<h3 class="fn" id="viewportChangeRequested"><a name="viewportChangeRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">viewportChangeRequested</span>()</h3>
+<p>Page authors can provide the supplied values by using the viewport meta tag. More information about this can be found at <a href="http://developer.apple.com/safari/library/documentation/appleapplications/reference/safariwebcontent/usingtheviewport/usingtheviewport.html">Safari Reference Library: Using the Viewport Meta Tag</a>.</p>
+<p>This function was introduced in  Qt 4.8.</p>
+<p><b>See also </b><a href="qwebpage-viewportattributes.html">QWebPage::ViewportAttributes</a>, <a href="qwebpage.html#preferredContentsSize-prop">setPreferredContentsSize</a>(), and QGraphicsWebView::setScale().</p>
+<!-- @@@viewportChangeRequested -->
+<!-- $$$windowCloseRequested[overload1]$$$windowCloseRequested -->
+<h3 class="fn" id="windowCloseRequested"><a name="windowCloseRequested"></a><code>[signal] </code><span class="type">void</span> QWebPage::&#8203;<span class="name">windowCloseRequested</span>()</h3>
+<p>This signal is emitted whenever the page requests the web browser window to be closed, for example through the JavaScript <code>window.close()</code> call.</p>
+<!-- @@@windowCloseRequested -->
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+<!-- $$$qWebKitMajorVersion[overload1]$$$qWebKitMajorVersion -->
+<h3 class="fn" id="qWebKitMajorVersion"><a name="qWebKitMajorVersion"></a><span class="type">int</span> <span class="name">qWebKitMajorVersion</span>()</h3>
+<p>Returns the 'major' version number of WebKit at run-time as an integer (for example, 531). This is the version of WebKit the application was compiled against.</p>
+<p>This function was introduced in  Qt 4.6.</p>
+<p><b>See also </b><a href="qwebpage.html#qWebKitVersion">qWebKitVersion</a>().</p>
+<!-- @@@qWebKitMajorVersion -->
+<!-- $$$qWebKitMinorVersion[overload1]$$$qWebKitMinorVersion -->
+<h3 class="fn" id="qWebKitMinorVersion"><a name="qWebKitMinorVersion"></a><span class="type">int</span> <span class="name">qWebKitMinorVersion</span>()</h3>
+<p>Returns the 'minor' version number of WebKit at run-time as an integer (for example, 3). This is the version of WebKit the application was compiled against.</p>
+<p>This function was introduced in  Qt 4.6.</p>
+<p><b>See also </b><a href="qwebpage.html#qWebKitVersion">qWebKitVersion</a>().</p>
+<!-- @@@qWebKitMinorVersion -->
+<!-- $$$qWebKitVersion[overload1]$$$qWebKitVersion -->
+<h3 class="fn" id="qWebKitVersion"><a name="qWebKitVersion"></a><span class="type">QString</span> <span class="name">qWebKitVersion</span>()</h3>
+<p>Returns the version number of WebKit at run-time as a string (for example, &quot;531.3&quot;).</p>
+<p>This version is commonly used in WebKit based browsers as part of the user agent string. Web servers and JavaScript might use it to identify the presence of certain WebKit engine features and behaviour.</p>
+<p>The evolution of this version is bound to the releases of Apple's Safari browser.</p>
+<p>This function was introduced in  Qt 4.6.</p>
+<p><b>See also </b><a href="qwebpage.html#userAgentForUrl">QWebPage::userAgentForUrl</a>().</p>
+<!-- @@@qWebKitVersion -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2014 Digia Plc and/or its
+   subsidiaries. Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Digia, Qt and their respective logos are trademarks of Digia Plc     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qwebview.cpp -->
+  <title>QWebView Class | Qt 5.212.0 </title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li>Qt 5.212.0</li>
+<li>QWebView</li>
+<li id="buildversion">Qt 5.212.0 Reference Documentation</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#elements-of-qwebview">Elements of QWebView</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QWebView Class</h1>
+<!-- $$$QWebView-brief -->
+<p>The <a href="qwebview.html">QWebView</a> class provides a widget that is used to view and edit web documents. <a href="#details">More...</a></p>
+<!-- @@@QWebView -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;QWebView&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += webkitwidgets</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 4.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> </td></tr></table></div><ul>
+<li><a href="qwebview-members.html">List of all members, including inherited members</a></li>
+<li><a href="qwebview-obsolete.html">Obsolete members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="qwebview.html#hasSelection-prop">hasSelection</a></b> : const bool</li>
+<li class="fn"><b><a href="qwebview.html#icon-prop">icon</a></b> : const QIcon</li>
+<li class="fn"><b><a href="qwebview.html#modified-prop">modified</a></b> : const bool</li>
+<li class="fn"><b><a href="qwebview.html#renderHints-prop">renderHints</a></b> : QPainter::RenderHints</li>
+<li class="fn"><b><a href="qwebview.html#selectedHtml-prop">selectedHtml</a></b> : const QString</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="qwebview.html#selectedText-prop">selectedText</a></b> : const QString</li>
+<li class="fn"><b><a href="qwebview.html#title-prop">title</a></b> : const QString</li>
+<li class="fn"><b><a href="qwebview.html#url-prop">url</a></b> : QUrl</li>
+<li class="fn"><b><a href="qwebview.html#zoomFactor-prop">zoomFactor</a></b> : qreal</li>
+</ul>
+</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#QWebView">QWebView</a></b>(QWidget *<i> parent</i> = Q_NULLPTR)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#dtor.QWebView">~QWebView</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#event">event</a></b>(QEvent *<i> e</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#findText">findText</a></b>(const QString &amp;<i> subString</i>, QWebPage::FindFlags<i> options</i> = QWebPage::FindFlags())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#hasSelection-prop">hasSelection</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebHistory * </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#history">history</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QIcon </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#icon-prop">icon</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#inputMethodQuery">inputMethodQuery</a></b>(Qt::InputMethodQuery<i> property</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#modified-prop">isModified</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#load">load</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#load-2">load</a></b>(const QNetworkRequest &amp;<i> request</i>, QNetworkAccessManager::Operation<i> operation</i> = QNetworkAccessManager::GetOperation, const QByteArray &amp;<i> body</i> = QByteArray())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebPage * </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#page">page</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#pageAction">pageAction</a></b>(QWebPage::WebAction<i> action</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPainter::RenderHints </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#renderHints-prop">renderHints</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#selectedHtml-prop">selectedHtml</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#selectedText-prop">selectedText</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#setContent">setContent</a></b>(const QByteArray &amp;<i> data</i>, const QString &amp;<i> mimeType</i> = QString(), const QUrl &amp;<i> baseUrl</i> = QUrl())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#setHtml">setHtml</a></b>(const QString &amp;<i> html</i>, const QUrl &amp;<i> baseUrl</i> = QUrl())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#setPage">setPage</a></b>(QWebPage *<i> page</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#setRenderHint">setRenderHint</a></b>(QPainter::RenderHint<i> hint</i>, bool<i> enabled</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#renderHints-prop">setRenderHints</a></b>(QPainter::RenderHints<i> hints</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#setTextSizeMultiplier">setTextSizeMultiplier</a></b>(qreal<i> factor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#url-prop">setUrl</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#zoomFactor-prop">setZoomFactor</a></b>(qreal<i> factor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebSettings * </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#settings">settings</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#sizeHint">sizeHint</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> qreal </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#textSizeMultiplier">textSizeMultiplier</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#title-prop">title</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#triggerPageAction">triggerPageAction</a></b>(QWebPage::WebAction<i> action</i>, bool<i> checked</i> = false)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#url-prop">url</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> qreal </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#zoomFactor-prop">zoomFactor</a></b>() const</td></tr>
+</table></div>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#back">back</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#forward">forward</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#print">print</a></b>(QPrinter *<i> printer</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#reload">reload</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#stop">stop</a></b>()</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#iconChanged">iconChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#linkClicked">linkClicked</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#loadFinished">loadFinished</a></b>(bool<i> ok</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#loadProgress">loadProgress</a></b>(int<i> progress</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#loadStarted">loadStarted</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#selectionChanged">selectionChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#statusBarMessage">statusBarMessage</a></b>(const QString &amp;<i> text</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#titleChanged">titleChanged</a></b>(const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#urlChanged">urlChanged</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#changeEvent">changeEvent</a></b>(QEvent *<i> e</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#contextMenuEvent">contextMenuEvent</a></b>(QContextMenuEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QWebView * </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#createWindow">createWindow</a></b>(QWebPage::WebWindowType<i> type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#dragEnterEvent">dragEnterEvent</a></b>(QDragEnterEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#dragLeaveEvent">dragLeaveEvent</a></b>(QDragLeaveEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#dragMoveEvent">dragMoveEvent</a></b>(QDragMoveEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#dropEvent">dropEvent</a></b>(QDropEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#focusInEvent">focusInEvent</a></b>(QFocusEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#focusNextPrevChild">focusNextPrevChild</a></b>(bool<i> next</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#focusOutEvent">focusOutEvent</a></b>(QFocusEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#inputMethodEvent">inputMethodEvent</a></b>(QInputMethodEvent *<i> e</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#keyPressEvent">keyPressEvent</a></b>(QKeyEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#keyReleaseEvent">keyReleaseEvent</a></b>(QKeyEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#mouseDoubleClickEvent">mouseDoubleClickEvent</a></b>(QMouseEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#mouseMoveEvent">mouseMoveEvent</a></b>(QMouseEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#mousePressEvent">mousePressEvent</a></b>(QMouseEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#mouseReleaseEvent">mouseReleaseEvent</a></b>(QMouseEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#paintEvent">paintEvent</a></b>(QPaintEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#resizeEvent">resizeEvent</a></b>(QResizeEvent *<i> e</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebview.html#wheelEvent">wheelEvent</a></b>(QWheelEvent *<i> ev</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QWebView-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qwebview.html">QWebView</a> class provides a widget that is used to view and edit web documents.</p>
+<p><a href="qwebview.html">QWebView</a> is the main widget component of the Qt WebKit web browsing module. It can be used in various applications to display web content live from the Internet.</p>
+<p>The image below shows <a href="qwebview.html">QWebView</a> previewed in Qt Creator with the Qt Homepage.</p>
+<p class="centerAlign"><img src="images/qwebview-url.png" alt="" /></p><p>A web site can be loaded onto <a href="qwebview.html">QWebView</a> with the <a href="qwebview.html#load">load</a>() function. Like all Qt widgets, the show() function must be invoked in order to display <a href="qwebview.html">QWebView</a>. The snippet below illustrates this:</p>
+<pre class="cpp">    <span class="type"><a href="qwebview.html#QWebView">QWebView</a></span> <span class="operator">*</span>view <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="qwebview.html#QWebView">QWebView</a></span>(parent);
+    view<span class="operator">-</span><span class="operator">&gt;</span>load(<span class="type">QUrl</span>(<span class="string">&quot;http://qt.nokia.com/&quot;</span>));
+    view<span class="operator">-</span><span class="operator">&gt;</span>show();</pre>
+<p>Alternatively, <a href="qwebview.html#url-prop">setUrl</a>() can also be used to load a web site. If you have the HTML content readily available, you can use <a href="qwebview.html#setHtml">setHtml</a>() instead.</p>
+<p>The <a href="qwebview.html#loadStarted">loadStarted</a>() signal is emitted when the view begins loading. The <a href="qwebview.html#loadProgress">loadProgress</a>() signal, on the other hand, is emitted whenever an element of the web view completes loading, such as an embedded image, a script, etc. Finally, the <a href="qwebview.html#loadFinished">loadFinished</a>() signal is emitted when the view has loaded completely. It's argument - either <code>true</code> or <code>false</code> - indicates load success or failure.</p>
+<p>The <a href="qwebview.html#page">page</a>() function returns a pointer to the web page object. See <a href="qwebview.html#elements-of-qwebview">Elements of QWebView</a> for an explanation of how the web page is related to the view. To modify your web view's settings, you can access the <a href="qwebsettings.html">QWebSettings</a> object with the <a href="qwebview.html#settings">settings</a>() function. With <a href="qwebsettings.html">QWebSettings</a>, you can change the default fonts, enable or disable features such as JavaScript and plugins.</p>
+<p>The title of an HTML document can be accessed with the <a href="qwebview.html#title-prop">title</a>() property. Additionally, a web site may also specify an icon, which can be accessed using the <a href="qwebview.html#icon-prop">icon</a>() property. If the title or the icon changes, the corresponding <a href="qwebview.html#titleChanged">titleChanged</a>() and <a href="qwebview.html#iconChanged">iconChanged</a>() signals will be emitted. The <a href="qwebview.html#textSizeMultiplier">textSizeMultiplier</a>() property can be used to change the overall size of the text displayed in the web view.</p>
+<p>If you require a custom context menu, you can implement it by reimplementing contextMenuEvent() and populating your QMenu with the actions obtained from <a href="qwebview.html#pageAction">pageAction</a>(). More functionality such as reloading the view, copying selected text to the clipboard, or pasting into the view, is also encapsulated within the QAction objects returned by <a href="qwebview.html#pageAction">pageAction</a>(). These actions can be programmatically triggered using <a href="qwebview.html#triggerPageAction">triggerPageAction</a>(). Alternatively, the actions can be added to a toolbar or a menu directly. <a href="qwebview.html">QWebView</a> maintains the state of the returned actions but allows modification of action properties such as text or icon.</p>
+<p>A <a href="qwebview.html">QWebView</a> can be printed onto a QPrinter using the <a href="qwebview.html#print">print</a>() function. This function is marked as a slot and can be conveniently connected to QPrintPreviewDialog's paintRequested() signal.</p>
+<p>If you want to provide support for web sites that allow the user to open new windows, such as pop-up windows, you can subclass <a href="qwebview.html">QWebView</a> and reimplement the <a href="qwebview.html#createWindow">createWindow</a>() function.</p>
+<a name="elements-of-qwebview"></a>
+<h3 >Elements of QWebView</h3>
+<p><a href="qwebview.html">QWebView</a> consists of other objects such as <a href="qwebframe.html">QWebFrame</a> and <a href="qwebpage.html">QWebPage</a>. The flowchart below shows these elements are related.</p>
+<p class="centerAlign"><img src="images/qwebview-diagram.png" alt="" /></p><p><b>Note: </b>It is possible to use <a href="qwebpage.html">QWebPage</a> and <a href="qwebframe.html">QWebFrame</a>, without using <a href="qwebview.html">QWebView</a>, if you do not require QWidget attributes. Nevertheless, Qt WebKit depends on QtGui, so you should use a QApplication instead of QCoreApplication.</p></div>
+<p><b>See also </b>Previewer Example, Tab Browser, Form Extractor Example, and Fancy Browser Example.</p>
+<!-- @@@QWebView -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$hasSelection-prop$$$hasSelection -->
+<h3 class="fn" id="hasSelection-prop"><a name="hasSelection-prop"></a><span class="name">hasSelection</span> : const <span class="type">bool</span></h3>
+<p>This property holds whether this page contains selected content or not.</p>
+<p>By default, this property is false.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>hasSelection</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebview.html#selectionChanged">selectionChanged</a>().</p>
+<!-- @@@hasSelection -->
+<!-- $$$icon-prop$$$icon -->
+<h3 class="fn" id="icon-prop"><a name="icon-prop"></a><span class="name">icon</span> : const <span class="type">QIcon</span></h3>
+<p>This property holds the icon associated with the web page currently viewed.</p>
+<p>By default, this property contains a null icon.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QIcon </td><td class="memItemRight bottomAlign"><span class="name"><b>icon</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebview.html#iconChanged">iconChanged</a>() and <a href="qwebsettings.html#iconForUrl">QWebSettings::iconForUrl</a>().</p>
+<!-- @@@icon -->
+<!-- $$$modified-prop$$$isModified -->
+<h3 class="fn" id="modified-prop"><a name="modified-prop"></a><span class="name">modified</span> : const <span class="type">bool</span></h3>
+<p>This property holds whether the document was modified by the user.</p>
+<p>Parts of HTML documents can be editable for example through the <code>contenteditable</code> attribute on HTML elements.</p>
+<p>By default, this property is false.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isModified</b></span>() const</td></tr>
+</table></div>
+<!-- @@@modified -->
+<!-- $$$renderHints-prop$$$renderHints$$$setRenderHintsQPainter::RenderHints -->
+<h3 class="fn" id="renderHints-prop"><a name="renderHints-prop"></a><span class="name">renderHints</span> : <span class="type">QPainter::RenderHints</span></h3>
+<p>This property holds the default render hints for the view.</p>
+<p>These hints are used to initialize QPainter before painting the Web page.</p>
+<p>QPainter::TextAntialiasing and QPainter::SmoothPixmapTransform are enabled by default.</p>
+<p>This property was introduced in  Qt 4.6.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QPainter::RenderHints </td><td class="memItemRight bottomAlign"><span class="name"><b>renderHints</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setRenderHints</b></span>(QPainter::RenderHints<i> hints</i>)</td></tr>
+</table></div>
+<p><b>See also </b>QPainter::renderHints().</p>
+<!-- @@@renderHints -->
+<!-- $$$selectedHtml-prop$$$selectedHtml -->
+<h3 class="fn" id="selectedHtml-prop"><a name="selectedHtml-prop"></a><span class="name">selectedHtml</span> : const <span class="type">QString</span></h3>
+<p>This property holds the HTML currently selected.</p>
+<p>By default, this property contains an empty string.</p>
+<p>This property was introduced in  Qt 4.8.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>selectedHtml</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebview.html#findText">findText</a>(), <a href="qwebview.html#selectionChanged">selectionChanged</a>(), and <a href="qwebview.html#selectedText-prop">selectedText</a>().</p>
+<!-- @@@selectedHtml -->
+<!-- $$$selectedText-prop$$$selectedText -->
+<h3 class="fn" id="selectedText-prop"><a name="selectedText-prop"></a><span class="name">selectedText</span> : const <span class="type">QString</span></h3>
+<p>This property holds the text currently selected.</p>
+<p>By default, this property contains an empty string.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>selectedText</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebview.html#findText">findText</a>(), <a href="qwebview.html#selectionChanged">selectionChanged</a>(), and <a href="qwebview.html#selectedHtml-prop">selectedHtml</a>().</p>
+<!-- @@@selectedText -->
+<!-- $$$title-prop$$$title -->
+<h3 class="fn" id="title-prop"><a name="title-prop"></a><span class="name">title</span> : const <span class="type">QString</span></h3>
+<p>This property holds the title of the web page currently viewed.</p>
+<p>By default, this property contains an empty string.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>title</b></span>() const</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebview.html#titleChanged">titleChanged</a>().</p>
+<!-- @@@title -->
+<!-- $$$url-prop$$$url$$$setUrlconstQUrl& -->
+<h3 class="fn" id="url-prop"><a name="url-prop"></a><span class="name">url</span> : <span class="type">QUrl</span></h3>
+<p>This property holds the url of the web page currently viewed.</p>
+<p>Setting this property clears the view and loads the URL.</p>
+<p>By default, this property contains an empty, invalid URL.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QUrl </td><td class="memItemRight bottomAlign"><span class="name"><b>url</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setUrl</b></span>(const QUrl &amp;<i> url</i>)</td></tr>
+</table></div>
+<p><b>See also </b><a href="qwebview.html#load">load</a>() and <a href="qwebview.html#urlChanged">urlChanged</a>().</p>
+<!-- @@@url -->
+<!-- $$$zoomFactor-prop$$$zoomFactor$$$setZoomFactorqreal -->
+<h3 class="fn" id="zoomFactor-prop"><a name="zoomFactor-prop"></a><span class="name">zoomFactor</span> : <span class="type">qreal</span></h3>
+<p>This property holds the zoom factor for the view.</p>
+<p>This property was introduced in  Qt 4.5.</p>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> qreal </td><td class="memItemRight bottomAlign"><span class="name"><b>zoomFactor</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setZoomFactor</b></span>(qreal<i> factor</i>)</td></tr>
+</table></div>
+<!-- @@@zoomFactor -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QWebView[overload1]$$$QWebViewQWidget* -->
+<h3 class="fn" id="QWebView"><a name="QWebView"></a>QWebView::&#8203;<span class="name">QWebView</span>(<span class="type">QWidget</span> *<i> parent</i> = Q_NULLPTR)</h3>
+<p>Constructs an empty <a href="qwebview.html">QWebView</a> with parent <i>parent</i>.</p>
+<p><b>See also </b><a href="qwebview.html#load">load</a>().</p>
+<!-- @@@QWebView -->
+<!-- $$$~QWebView[overload1]$$$~QWebView -->
+<h3 class="fn" id="dtor.QWebView"><a name="dtor.QWebView"></a>QWebView::&#8203;<span class="name">~QWebView</span>()</h3>
+<p>Destroys the web view.</p>
+<!-- @@@~QWebView -->
+<!-- $$$back[overload1]$$$back -->
+<h3 class="fn" id="back"><a name="back"></a><code>[slot] </code><span class="type">void</span> QWebView::&#8203;<span class="name">back</span>()</h3>
+<p>Convenience slot that loads the previous document in the list of documents built by navigating links. Does nothing if there is no previous document.</p>
+<p>It is equivalent to</p>
+<pre class="cpp">    view<span class="operator">-</span><span class="operator">&gt;</span>page()<span class="operator">-</span><span class="operator">&gt;</span>triggerPageAction(<span class="type"><a href="qwebpage.html">QWebPage</a></span><span class="operator">::</span>GoBack);</pre>
+<p><b>See also </b><a href="qwebview.html#forward">forward</a>() and <a href="qwebview.html#pageAction">pageAction</a>().</p>
+<!-- @@@back -->
+<!-- $$$changeEvent[overload1]$$$changeEventQEvent* -->
+<h3 class="fn" id="changeEvent"><a name="changeEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">changeEvent</span>(<span class="type">QEvent</span> *<i> e</i>)</h3>
+<!-- @@@changeEvent -->
+<!-- $$$contextMenuEvent[overload1]$$$contextMenuEventQContextMenuEvent* -->
+<h3 class="fn" id="contextMenuEvent"><a name="contextMenuEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">contextMenuEvent</span>(<span class="type">QContextMenuEvent</span> *<i> ev</i>)</h3>
+<!-- @@@contextMenuEvent -->
+<!-- $$$createWindow[overload1]$$$createWindowQWebPage::WebWindowType -->
+<h3 class="fn" id="createWindow"><a name="createWindow"></a><code>[virtual protected] </code><span class="type"><a href="qwebview.html#QWebView">QWebView</a></span> * QWebView::&#8203;<span class="name">createWindow</span>(<span class="type"><a href="qwebpage.html#WebWindowType-enum">QWebPage::WebWindowType</a></span><i> type</i>)</h3>
+<p>This function is called from the createWindow() method of the associated <a href="qwebpage.html">QWebPage</a>, each time the page wants to create a new window of the given <i>type</i>. This might be the result, for example, of a JavaScript request to open a document in a new window.</p>
+<p><b>Note: </b>If the createWindow() method of the associated page is reimplemented, this method is not called, unless explicitly done so in the reimplementation.</p><p><b>Note: </b>In the cases when the window creation is being triggered by JavaScript, apart from reimplementing this method application must also set the JavaScriptCanOpenWindows attribute of <a href="qwebsettings.html">QWebSettings</a> to true in order for it to get called.</p><p><b>See also </b><a href="qwebpage.html#createWindow">QWebPage::createWindow</a>() and <a href="qwebpage.html#acceptNavigationRequest">QWebPage::acceptNavigationRequest</a>().</p>
+<!-- @@@createWindow -->
+<!-- $$$dragEnterEvent[overload1]$$$dragEnterEventQDragEnterEvent* -->
+<h3 class="fn" id="dragEnterEvent"><a name="dragEnterEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">dragEnterEvent</span>(<span class="type">QDragEnterEvent</span> *<i> ev</i>)</h3>
+<!-- @@@dragEnterEvent -->
+<!-- $$$dragLeaveEvent[overload1]$$$dragLeaveEventQDragLeaveEvent* -->
+<h3 class="fn" id="dragLeaveEvent"><a name="dragLeaveEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">dragLeaveEvent</span>(<span class="type">QDragLeaveEvent</span> *<i> ev</i>)</h3>
+<!-- @@@dragLeaveEvent -->
+<!-- $$$dragMoveEvent[overload1]$$$dragMoveEventQDragMoveEvent* -->
+<h3 class="fn" id="dragMoveEvent"><a name="dragMoveEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">dragMoveEvent</span>(<span class="type">QDragMoveEvent</span> *<i> ev</i>)</h3>
+<!-- @@@dragMoveEvent -->
+<!-- $$$dropEvent[overload1]$$$dropEventQDropEvent* -->
+<h3 class="fn" id="dropEvent"><a name="dropEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">dropEvent</span>(<span class="type">QDropEvent</span> *<i> ev</i>)</h3>
+<!-- @@@dropEvent -->
+<!-- $$$event[overload1]$$$eventQEvent* -->
+<h3 class="fn" id="event"><a name="event"></a><span class="type">bool</span> QWebView::&#8203;<span class="name">event</span>(<span class="type">QEvent</span> *<i> e</i>)</h3>
+<!-- @@@event -->
+<!-- $$$findText[overload1]$$$findTextconstQString&QWebPage::FindFlags -->
+<h3 class="fn" id="findText"><a name="findText"></a><span class="type">bool</span> QWebView::&#8203;<span class="name">findText</span>(const <span class="type">QString</span> &amp;<i> subString</i>, <span class="type"><a href="qwebpage.html#FindFlag-enum">QWebPage::FindFlags</a></span><i> options</i> = QWebPage::FindFlags())</h3>
+<p>Finds the specified string, <i>subString</i>, in the page, using the given <i>options</i>.</p>
+<p>If the HighlightAllOccurrences flag is passed, the function will highlight all occurrences that exist in the page. All subsequent calls will extend the highlight, rather than replace it, with occurrences of the new string.</p>
+<p>If the HighlightAllOccurrences flag is not passed, the function will select an occurrence and all subsequent calls will replace the current occurrence with the next one.</p>
+<p>To clear the selection, just pass an empty string.</p>
+<p>Returns true if <i>subString</i> was found; otherwise returns false.</p>
+<p><b>See also </b><a href="qwebview.html#selectedText-prop">selectedText</a>() and <a href="qwebview.html#selectionChanged">selectionChanged</a>().</p>
+<!-- @@@findText -->
+<!-- $$$focusInEvent[overload1]$$$focusInEventQFocusEvent* -->
+<h3 class="fn" id="focusInEvent"><a name="focusInEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">focusInEvent</span>(<span class="type">QFocusEvent</span> *<i> ev</i>)</h3>
+<!-- @@@focusInEvent -->
+<!-- $$$focusNextPrevChild[overload1]$$$focusNextPrevChildbool -->
+<h3 class="fn" id="focusNextPrevChild"><a name="focusNextPrevChild"></a><code>[protected] </code><span class="type">bool</span> QWebView::&#8203;<span class="name">focusNextPrevChild</span>(<span class="type">bool</span><i> next</i>)</h3>
+<!-- @@@focusNextPrevChild -->
+<!-- $$$focusOutEvent[overload1]$$$focusOutEventQFocusEvent* -->
+<h3 class="fn" id="focusOutEvent"><a name="focusOutEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">focusOutEvent</span>(<span class="type">QFocusEvent</span> *<i> ev</i>)</h3>
+<!-- @@@focusOutEvent -->
+<!-- $$$forward[overload1]$$$forward -->
+<h3 class="fn" id="forward"><a name="forward"></a><code>[slot] </code><span class="type">void</span> QWebView::&#8203;<span class="name">forward</span>()</h3>
+<p>Convenience slot that loads the next document in the list of documents built by navigating links. Does nothing if there is no next document.</p>
+<p>It is equivalent to</p>
+<pre class="cpp">    view<span class="operator">-</span><span class="operator">&gt;</span>page()<span class="operator">-</span><span class="operator">&gt;</span>triggerPageAction(<span class="type"><a href="qwebpage.html">QWebPage</a></span><span class="operator">::</span>GoForward);</pre>
+<p><b>See also </b><a href="qwebview.html#back">back</a>() and <a href="qwebview.html#pageAction">pageAction</a>().</p>
+<!-- @@@forward -->
+<!-- $$$history[overload1]$$$history -->
+<h3 class="fn" id="history"><a name="history"></a><span class="type"><a href="qwebhistory.html">QWebHistory</a></span> * QWebView::&#8203;<span class="name">history</span>() const</h3>
+<p>Returns a pointer to the view's history of navigated web pages.</p>
+<p>It is equivalent to</p>
+<pre class="cpp">    view<span class="operator">-</span><span class="operator">&gt;</span>page()<span class="operator">-</span><span class="operator">&gt;</span>history();</pre>
+<!-- @@@history -->
+<!-- $$$iconChanged[overload1]$$$iconChanged -->
+<h3 class="fn" id="iconChanged"><a name="iconChanged"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">iconChanged</span>()</h3>
+<p>This signal is emitted whenever the icon of the page is loaded or changes.</p>
+<p>In order for icons to be loaded, you will need to set an icon database path using <a href="qwebsettings.html#setIconDatabasePath">QWebSettings::setIconDatabasePath</a>().</p>
+<p><b>See also </b><a href="qwebview.html#icon-prop">icon</a>() and <a href="qwebsettings.html#setIconDatabasePath">QWebSettings::setIconDatabasePath</a>().</p>
+<!-- @@@iconChanged -->
+<!-- $$$inputMethodEvent[overload1]$$$inputMethodEventQInputMethodEvent* -->
+<h3 class="fn" id="inputMethodEvent"><a name="inputMethodEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">inputMethodEvent</span>(<span class="type">QInputMethodEvent</span> *<i> e</i>)</h3>
+<!-- @@@inputMethodEvent -->
+<!-- $$$inputMethodQuery[overload1]$$$inputMethodQueryQt::InputMethodQuery -->
+<h3 class="fn" id="inputMethodQuery"><a name="inputMethodQuery"></a><span class="type">QVariant</span> QWebView::&#8203;<span class="name">inputMethodQuery</span>(<span class="type">Qt::InputMethodQuery</span><i> property</i>) const</h3>
+<!-- @@@inputMethodQuery -->
+<!-- $$$keyPressEvent[overload1]$$$keyPressEventQKeyEvent* -->
+<h3 class="fn" id="keyPressEvent"><a name="keyPressEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">keyPressEvent</span>(<span class="type">QKeyEvent</span> *<i> ev</i>)</h3>
+<!-- @@@keyPressEvent -->
+<!-- $$$keyReleaseEvent[overload1]$$$keyReleaseEventQKeyEvent* -->
+<h3 class="fn" id="keyReleaseEvent"><a name="keyReleaseEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">keyReleaseEvent</span>(<span class="type">QKeyEvent</span> *<i> ev</i>)</h3>
+<!-- @@@keyReleaseEvent -->
+<!-- $$$linkClicked[overload1]$$$linkClickedconstQUrl& -->
+<h3 class="fn" id="linkClicked"><a name="linkClicked"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">linkClicked</span>(const <span class="type">QUrl</span> &amp;<i> url</i>)</h3>
+<p>This signal is emitted whenever the user clicks on a link and the page's linkDelegationPolicy property is set to delegate the link handling for the specified <i>url</i>.</p>
+<p><b>See also </b><a href="qwebpage.html#linkDelegationPolicy-prop">QWebPage::linkDelegationPolicy</a>().</p>
+<!-- @@@linkClicked -->
+<!-- $$$load[overload1]$$$loadconstQUrl& -->
+<h3 class="fn" id="load"><a name="load"></a><span class="type">void</span> QWebView::&#8203;<span class="name">load</span>(const <span class="type">QUrl</span> &amp;<i> url</i>)</h3>
+<p>Loads the specified <i>url</i> and displays it.</p>
+<p><b>Note: </b>The view remains the same until enough data has arrived to display the new <i>url</i>.</p><p><b>See also </b><a href="qwebview.html#url-prop">setUrl</a>(), <a href="qwebview.html#url-prop">url</a>(), <a href="qwebview.html#urlChanged">urlChanged</a>(), and QUrl::fromUserInput().</p>
+<!-- @@@load -->
+<!-- $$$load$$$loadconstQNetworkRequest&QNetworkAccessManager::OperationconstQByteArray& -->
+<h3 class="fn" id="load-2"><a name="load-2"></a><span class="type">void</span> QWebView::&#8203;<span class="name">load</span>(const <span class="type">QNetworkRequest</span> &amp;<i> request</i>, <span class="type">QNetworkAccessManager::Operation</span><i> operation</i> = QNetworkAccessManager::GetOperation, const <span class="type">QByteArray</span> &amp;<i> body</i> = QByteArray())</h3>
+<p>Loads a network request, <i>request</i>, using the method specified in <i>operation</i>.</p>
+<p><i>body</i> is optional and is only used for POST operations.</p>
+<p><b>Note: </b>The view remains the same until enough data has arrived to display the new url.</p><p><b>See also </b><a href="qwebview.html#url-prop">url</a>() and <a href="qwebview.html#urlChanged">urlChanged</a>().</p>
+<!-- @@@load -->
+<!-- $$$loadFinished[overload1]$$$loadFinishedbool -->
+<h3 class="fn" id="loadFinished"><a name="loadFinished"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">loadFinished</span>(<span class="type">bool</span><i> ok</i>)</h3>
+<p>This signal is emitted when a load of the page is finished. <i>ok</i> will indicate whether the load was successful or any error occurred.</p>
+<p><b>See also </b><a href="qwebview.html#loadStarted">loadStarted</a>().</p>
+<!-- @@@loadFinished -->
+<!-- $$$loadProgress[overload1]$$$loadProgressint -->
+<h3 class="fn" id="loadProgress"><a name="loadProgress"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">loadProgress</span>(<span class="type">int</span><i> progress</i>)</h3>
+<p>This signal is emitted every time an element in the web page completes loading and the overall loading progress advances.</p>
+<p>This signal tracks the progress of all child frames.</p>
+<p>The current value is provided by <i>progress</i> and scales from 0 to 100, which is the default range of QProgressBar.</p>
+<p><b>See also </b><a href="qwebview.html#loadStarted">loadStarted</a>() and <a href="qwebview.html#loadFinished">loadFinished</a>().</p>
+<!-- @@@loadProgress -->
+<!-- $$$loadStarted[overload1]$$$loadStarted -->
+<h3 class="fn" id="loadStarted"><a name="loadStarted"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">loadStarted</span>()</h3>
+<p>This signal is emitted when a new load of the page is started.</p>
+<p><b>See also </b><a href="qwebview.html#loadProgress">loadProgress</a>() and <a href="qwebview.html#loadFinished">loadFinished</a>().</p>
+<!-- @@@loadStarted -->
+<!-- $$$mouseDoubleClickEvent[overload1]$$$mouseDoubleClickEventQMouseEvent* -->
+<h3 class="fn" id="mouseDoubleClickEvent"><a name="mouseDoubleClickEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">mouseDoubleClickEvent</span>(<span class="type">QMouseEvent</span> *<i> ev</i>)</h3>
+<!-- @@@mouseDoubleClickEvent -->
+<!-- $$$mouseMoveEvent[overload1]$$$mouseMoveEventQMouseEvent* -->
+<h3 class="fn" id="mouseMoveEvent"><a name="mouseMoveEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">mouseMoveEvent</span>(<span class="type">QMouseEvent</span> *<i> ev</i>)</h3>
+<!-- @@@mouseMoveEvent -->
+<!-- $$$mousePressEvent[overload1]$$$mousePressEventQMouseEvent* -->
+<h3 class="fn" id="mousePressEvent"><a name="mousePressEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">mousePressEvent</span>(<span class="type">QMouseEvent</span> *<i> ev</i>)</h3>
+<!-- @@@mousePressEvent -->
+<!-- $$$mouseReleaseEvent[overload1]$$$mouseReleaseEventQMouseEvent* -->
+<h3 class="fn" id="mouseReleaseEvent"><a name="mouseReleaseEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">mouseReleaseEvent</span>(<span class="type">QMouseEvent</span> *<i> ev</i>)</h3>
+<!-- @@@mouseReleaseEvent -->
+<!-- $$$page[overload1]$$$page -->
+<h3 class="fn" id="page"><a name="page"></a><span class="type"><a href="qwebpage.html">QWebPage</a></span> * QWebView::&#8203;<span class="name">page</span>() const</h3>
+<p>Returns a pointer to the underlying web page.</p>
+<p><b>See also </b><a href="qwebview.html#setPage">setPage</a>().</p>
+<!-- @@@page -->
+<!-- $$$pageAction[overload1]$$$pageActionQWebPage::WebAction -->
+<h3 class="fn" id="pageAction"><a name="pageAction"></a><span class="type">QAction</span> * QWebView::&#8203;<span class="name">pageAction</span>(<span class="type"><a href="qwebpage.html#WebAction-enum">QWebPage::WebAction</a></span><i> action</i>) const</h3>
+<p>Returns a pointer to a QAction that encapsulates the specified web action <i>action</i>.</p>
+<!-- @@@pageAction -->
+<!-- $$$paintEvent[overload1]$$$paintEventQPaintEvent* -->
+<h3 class="fn" id="paintEvent"><a name="paintEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">paintEvent</span>(<span class="type">QPaintEvent</span> *<i> ev</i>)</h3>
+<!-- @@@paintEvent -->
+<!-- $$$print[overload1]$$$printQPrinter* -->
+<h3 class="fn" id="print"><a name="print"></a><code>[slot] </code><span class="type">void</span> QWebView::&#8203;<span class="name">print</span>(<span class="type">QPrinter</span> *<i> printer</i>) const</h3>
+<p>Prints the main frame to the given <i>printer</i>.</p>
+<p><b>See also </b><a href="qwebframe.html#print">QWebFrame::print</a>() and QPrintPreviewDialog.</p>
+<!-- @@@print -->
+<!-- $$$reload[overload1]$$$reload -->
+<h3 class="fn" id="reload"><a name="reload"></a><code>[slot] </code><span class="type">void</span> QWebView::&#8203;<span class="name">reload</span>()</h3>
+<p>Reloads the current document.</p>
+<p><b>See also </b><a href="qwebview.html#stop">stop</a>(), <a href="qwebview.html#pageAction">pageAction</a>(), and <a href="qwebview.html#loadStarted">loadStarted</a>().</p>
+<!-- @@@reload -->
+<!-- $$$resizeEvent[overload1]$$$resizeEventQResizeEvent* -->
+<h3 class="fn" id="resizeEvent"><a name="resizeEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">resizeEvent</span>(<span class="type">QResizeEvent</span> *<i> e</i>)</h3>
+<!-- @@@resizeEvent -->
+<!-- $$$selectionChanged[overload1]$$$selectionChanged -->
+<h3 class="fn" id="selectionChanged"><a name="selectionChanged"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">selectionChanged</span>()</h3>
+<p>This signal is emitted whenever the selection changes.</p>
+<p><b>See also </b><a href="qwebview.html#selectedText-prop">selectedText</a>().</p>
+<!-- @@@selectionChanged -->
+<!-- $$$setContent[overload1]$$$setContentconstQByteArray&constQString&constQUrl& -->
+<h3 class="fn" id="setContent"><a name="setContent"></a><span class="type">void</span> QWebView::&#8203;<span class="name">setContent</span>(const <span class="type">QByteArray</span> &amp;<i> data</i>, const <span class="type">QString</span> &amp;<i> mimeType</i> = QString(), const <span class="type">QUrl</span> &amp;<i> baseUrl</i> = QUrl())</h3>
+<p>Sets the content of the web view to the specified content <i>data</i>. If the <i>mimeType</i> argument is empty it is currently assumed that the content is HTML but in future versions we may introduce auto-detection.</p>
+<p>External objects referenced in the content are located relative to <i>baseUrl</i>.</p>
+<p>The <i>data</i> is loaded immediately; external objects are loaded asynchronously.</p>
+<p><b>See also </b><a href="qwebview.html#load">load</a>(), <a href="qwebview.html#setHtml">setHtml</a>(), and <a href="qwebframe.html#toHtml">QWebFrame::toHtml</a>().</p>
+<!-- @@@setContent -->
+<!-- $$$setHtml[overload1]$$$setHtmlconstQString&constQUrl& -->
+<h3 class="fn" id="setHtml"><a name="setHtml"></a><span class="type">void</span> QWebView::&#8203;<span class="name">setHtml</span>(const <span class="type">QString</span> &amp;<i> html</i>, const <span class="type">QUrl</span> &amp;<i> baseUrl</i> = QUrl())</h3>
+<p>Sets the content of the web view to the specified <i>html</i>.</p>
+<p>External objects such as stylesheets or images referenced in the HTML document are located relative to <i>baseUrl</i>.</p>
+<p>The <i>html</i> is loaded immediately; external objects are loaded asynchronously.</p>
+<p>When using this method, WebKit assumes that external resources such as JavaScript programs or style sheets are encoded in UTF-8 unless otherwise specified. For example, the encoding of an external script can be specified through the charset attribute of the HTML script tag. Alternatively, the encoding can also be specified by the web server.</p>
+<p>This is a convenience function equivalent to <a href="qwebview.html#setContent">setContent</a>(html, &quot;text/html&quot;, baseUrl).</p>
+<p><b>Warning:</b> This function works only for HTML, for other mime types (i.e&#x2e; XHTML, SVG) <a href="qwebview.html#setContent">setContent</a>() should be used instead.</p>
+<p><b>See also </b><a href="qwebview.html#load">load</a>(), <a href="qwebview.html#setContent">setContent</a>(), <a href="qwebframe.html#toHtml">QWebFrame::toHtml</a>(), and <a href="qwebframe.html#setContent">QWebFrame::setContent</a>().</p>
+<!-- @@@setHtml -->
+<!-- $$$setPage[overload1]$$$setPageQWebPage* -->
+<h3 class="fn" id="setPage"><a name="setPage"></a><span class="type">void</span> QWebView::&#8203;<span class="name">setPage</span>(<span class="type"><a href="qwebpage.html">QWebPage</a></span> *<i> page</i>)</h3>
+<p>Makes <i>page</i> the new web page of the web view.</p>
+<p>The parent QObject of the provided page remains the owner of the object. If the current page is a child of the web view, it will be deleted.</p>
+<p><b>See also </b><a href="qwebview.html#page">page</a>().</p>
+<!-- @@@setPage -->
+<!-- $$$setRenderHint[overload1]$$$setRenderHintQPainter::RenderHintbool -->
+<h3 class="fn" id="setRenderHint"><a name="setRenderHint"></a><span class="type">void</span> QWebView::&#8203;<span class="name">setRenderHint</span>(<span class="type">QPainter::RenderHint</span><i> hint</i>, <span class="type">bool</span><i> enabled</i> = true)</h3>
+<p>If <i>enabled</i> is true, enables the specified render <i>hint</i>; otherwise disables it.</p>
+<p>This function was introduced in  Qt 4.6.</p>
+<p><b>See also </b><a href="qwebview.html#renderHints-prop">renderHints</a> and QPainter::renderHints().</p>
+<!-- @@@setRenderHint -->
+<!-- $$$setTextSizeMultiplier[overload1]$$$setTextSizeMultiplierqreal -->
+<h3 class="fn" id="setTextSizeMultiplier"><a name="setTextSizeMultiplier"></a><span class="type">void</span> QWebView::&#8203;<span class="name">setTextSizeMultiplier</span>(<span class="type">qreal</span><i> factor</i>)</h3>
+<p>Sets the value of the multiplier used to scale the text in a Web page to the <i>factor</i> specified.</p>
+<p><b>See also </b><a href="qwebview.html#textSizeMultiplier">textSizeMultiplier</a>().</p>
+<!-- @@@setTextSizeMultiplier -->
+<!-- $$$settings[overload1]$$$settings -->
+<h3 class="fn" id="settings"><a name="settings"></a><span class="type"><a href="qwebsettings.html">QWebSettings</a></span> * QWebView::&#8203;<span class="name">settings</span>() const</h3>
+<p>Returns a pointer to the view/page specific settings object.</p>
+<p>It is equivalent to</p>
+<pre class="cpp">    view<span class="operator">-</span><span class="operator">&gt;</span>page()<span class="operator">-</span><span class="operator">&gt;</span>settings();</pre>
+<p><b>See also </b><a href="qwebsettings.html#globalSettings">QWebSettings::globalSettings</a>().</p>
+<!-- @@@settings -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn" id="sizeHint"><a name="sizeHint"></a><span class="type">QSize</span> QWebView::&#8203;<span class="name">sizeHint</span>() const</h3>
+<!-- @@@sizeHint -->
+<!-- $$$statusBarMessage[overload1]$$$statusBarMessageconstQString& -->
+<h3 class="fn" id="statusBarMessage"><a name="statusBarMessage"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">statusBarMessage</span>(const <span class="type">QString</span> &amp;<i> text</i>)</h3>
+<p>This signal is emitted when the status bar <i>text</i> is changed by the page.</p>
+<!-- @@@statusBarMessage -->
+<!-- $$$stop[overload1]$$$stop -->
+<h3 class="fn" id="stop"><a name="stop"></a><code>[slot] </code><span class="type">void</span> QWebView::&#8203;<span class="name">stop</span>()</h3>
+<p>Convenience slot that stops loading the document.</p>
+<p>It is equivalent to</p>
+<pre class="cpp">    view<span class="operator">-</span><span class="operator">&gt;</span>page()<span class="operator">-</span><span class="operator">&gt;</span>triggerPageAction(<span class="type"><a href="qwebpage.html">QWebPage</a></span><span class="operator">::</span>Stop);</pre>
+<p><b>See also </b><a href="qwebview.html#reload">reload</a>(), <a href="qwebview.html#pageAction">pageAction</a>(), and <a href="qwebview.html#loadFinished">loadFinished</a>().</p>
+<!-- @@@stop -->
+<!-- $$$textSizeMultiplier[overload1]$$$textSizeMultiplier -->
+<h3 class="fn" id="textSizeMultiplier"><a name="textSizeMultiplier"></a><span class="type">qreal</span> QWebView::&#8203;<span class="name">textSizeMultiplier</span>() const</h3>
+<p>Returns the value of the multiplier used to scale the text in a Web page.</p>
+<p><b>See also </b><a href="qwebview.html#setTextSizeMultiplier">setTextSizeMultiplier</a>().</p>
+<!-- @@@textSizeMultiplier -->
+<!-- $$$titleChanged[overload1]$$$titleChangedconstQString& -->
+<h3 class="fn" id="titleChanged"><a name="titleChanged"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">titleChanged</span>(const <span class="type">QString</span> &amp;<i> title</i>)</h3>
+<p>This signal is emitted whenever the <i>title</i> of the main frame changes.</p>
+<p><b>See also </b><a href="qwebview.html#title-prop">title</a>().</p>
+<!-- @@@titleChanged -->
+<!-- $$$triggerPageAction[overload1]$$$triggerPageActionQWebPage::WebActionbool -->
+<h3 class="fn" id="triggerPageAction"><a name="triggerPageAction"></a><span class="type">void</span> QWebView::&#8203;<span class="name">triggerPageAction</span>(<span class="type"><a href="qwebpage.html#WebAction-enum">QWebPage::WebAction</a></span><i> action</i>, <span class="type">bool</span><i> checked</i> = false)</h3>
+<p>Triggers the specified <i>action</i>. If it is a checkable action the specified <i>checked</i> state is assumed.</p>
+<p>The following example triggers the copy action and therefore copies any selected text to the clipboard.</p>
+<pre class="cpp">    view<span class="operator">-</span><span class="operator">&gt;</span>triggerAction(<span class="type"><a href="qwebpage.html">QWebPage</a></span><span class="operator">::</span>Copy);</pre>
+<p><b>See also </b><a href="qwebview.html#pageAction">pageAction</a>().</p>
+<!-- @@@triggerPageAction -->
+<!-- $$$urlChanged[overload1]$$$urlChangedconstQUrl& -->
+<h3 class="fn" id="urlChanged"><a name="urlChanged"></a><code>[signal] </code><span class="type">void</span> QWebView::&#8203;<span class="name">urlChanged</span>(const <span class="type">QUrl</span> &amp;<i> url</i>)</h3>
+<p>This signal is emitted when the <i>url</i> of the view changes.</p>
+<p><b>See also </b><a href="qwebview.html#url-prop">url</a>() and <a href="qwebview.html#load">load</a>().</p>
+<!-- @@@urlChanged -->
+<!-- $$$wheelEvent[overload1]$$$wheelEventQWheelEvent* -->
+<h3 class="fn" id="wheelEvent"><a name="wheelEvent"></a><code>[protected] </code><span class="type">void</span> QWebView::&#8203;<span class="name">wheelEvent</span>(<span class="type">QWheelEvent</span> *<i> ev</i>)</h3>
+<!-- @@@wheelEvent -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2014 Digia Plc and/or its
+   subsidiaries. Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Digia, Qt and their respective logos are trademarks of Digia Plc     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

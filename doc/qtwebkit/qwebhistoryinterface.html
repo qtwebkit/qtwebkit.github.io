@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qwebhistoryinterface.cpp -->
+  <title>QWebHistoryInterface Class | Qt 5.212.0 </title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li>Qt 5.212.0</li>
+<li>QWebHistoryInterface</li>
+<li id="buildversion">Qt 5.212.0 Reference Documentation</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QWebHistoryInterface Class</h1>
+<!-- $$$QWebHistoryInterface-brief -->
+<p>The <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> class provides an interface to implement link history. <a href="#details">More...</a></p>
+<!-- @@@QWebHistoryInterface -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;QWebHistoryInterface&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += webkitwidgets</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 4.4</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> </td></tr></table></div><ul>
+<li><a href="qwebhistoryinterface-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebhistoryinterface.html#QWebHistoryInterface">QWebHistoryInterface</a></b>(QObject *<i> parent</i> = Q_NULLPTR)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebhistoryinterface.html#dtor.QWebHistoryInterface">~QWebHistoryInterface</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qwebhistoryinterface.html#addHistoryEntry">addHistoryEntry</a></b>(const QString &amp;<i> url</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qwebhistoryinterface.html#historyContains">historyContains</a></b>(const QString &amp;<i> url</i>) const = 0</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QWebHistoryInterface * </td><td class="memItemRight bottomAlign"><b><a href="qwebhistoryinterface.html#defaultInterface">defaultInterface</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebhistoryinterface.html#setDefaultInterface">setDefaultInterface</a></b>(QWebHistoryInterface *<i> defaultInterface</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QWebHistoryInterface-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> class provides an interface to implement link history.</p>
+<p>The <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> is an interface that can be used to keep track of visited links. It contains two pure virtual methods that are called by the WebKit engine: <a href="qwebhistoryinterface.html#addHistoryEntry">addHistoryEntry</a>() is used to add urls that have been visited to the interface, while <a href="qwebhistoryinterface.html#historyContains">historyContains</a>() is used to query whether the given url has been visited by the user. By default the <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> is not set, so WebKit does not keep track of visited links.</p>
+<p><b>Note: </b>The history tracked by <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> is not specific to an instance of <a href="qwebpage.html">QWebPage</a> but applies to all pages.</p></div>
+<!-- @@@QWebHistoryInterface -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QWebHistoryInterface[overload1]$$$QWebHistoryInterfaceQObject* -->
+<h3 class="fn" id="QWebHistoryInterface"><a name="QWebHistoryInterface"></a>QWebHistoryInterface::&#8203;<span class="name">QWebHistoryInterface</span>(<span class="type">QObject</span> *<i> parent</i> = Q_NULLPTR)</h3>
+<p>Constructs a new <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> with parent <i>parent</i>.</p>
+<!-- @@@QWebHistoryInterface -->
+<!-- $$$~QWebHistoryInterface[overload1]$$$~QWebHistoryInterface -->
+<h3 class="fn" id="dtor.QWebHistoryInterface"><a name="dtor.QWebHistoryInterface"></a>QWebHistoryInterface::&#8203;<span class="name">~QWebHistoryInterface</span>()</h3>
+<p>Destroys the interface. If this is currently the default interface it will be unset.</p>
+<!-- @@@~QWebHistoryInterface -->
+<!-- $$$addHistoryEntry[overload1]$$$addHistoryEntryconstQString& -->
+<h3 class="fn" id="addHistoryEntry"><a name="addHistoryEntry"></a><code>[pure virtual] </code><span class="type">void</span> QWebHistoryInterface::&#8203;<span class="name">addHistoryEntry</span>(const <span class="type">QString</span> &amp;<i> url</i>)</h3>
+<p>Called by WebKit to add another <i>url</i> to the list of visited pages.</p>
+<!-- @@@addHistoryEntry -->
+<!-- $$$defaultInterface[overload1]$$$defaultInterface -->
+<h3 class="fn" id="defaultInterface"><a name="defaultInterface"></a><code>[static] </code><span class="type"><a href="qwebhistoryinterface.html#QWebHistoryInterface">QWebHistoryInterface</a></span> * QWebHistoryInterface::&#8203;<span class="name">defaultInterface</span>()</h3>
+<p>Returns the default interface that will be used by WebKit. If no default interface has been set, WebKit will not keep track of visited links and a null pointer will be returned.</p>
+<p><b>See also </b><a href="qwebhistoryinterface.html#setDefaultInterface">setDefaultInterface</a>().</p>
+<!-- @@@defaultInterface -->
+<!-- $$$historyContains[overload1]$$$historyContainsconstQString& -->
+<h3 class="fn" id="historyContains"><a name="historyContains"></a><code>[pure virtual] </code><span class="type">bool</span> QWebHistoryInterface::&#8203;<span class="name">historyContains</span>(const <span class="type">QString</span> &amp;<i> url</i>) const</h3>
+<p>Called by the WebKit engine to query whether a certain <i>url</i> has been visited by the user already. Returns true if the <i>url</i> is part of the history of visited links; otherwise returns false.</p>
+<!-- @@@historyContains -->
+<!-- $$$setDefaultInterface[overload1]$$$setDefaultInterfaceQWebHistoryInterface* -->
+<h3 class="fn" id="setDefaultInterface"><a name="setDefaultInterface"></a><code>[static] </code><span class="type">void</span> QWebHistoryInterface::&#8203;<span class="name">setDefaultInterface</span>(<span class="type"><a href="qwebhistoryinterface.html#QWebHistoryInterface">QWebHistoryInterface</a></span> *<i> defaultInterface</i>)</h3>
+<p>Sets a new default interface, <i>defaultInterface</i>, that will be used by all of WebKit to keep track of visited links.</p>
+<p>If an interface without a parent has already been set, the old interface will be deleted. When the application exists <a href="qwebhistoryinterface.html">QWebHistoryInterface</a> will automatically delete the <i>defaultInterface</i> if it does not have a parent.</p>
+<p><b>See also </b><a href="qwebhistoryinterface.html#defaultInterface">defaultInterface</a>().</p>
+<!-- @@@setDefaultInterface -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2014 Digia Plc and/or its
+   subsidiaries. Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Digia, Qt and their respective logos are trademarks of Digia Plc     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qwebinspector.cpp -->
+  <title>QWebInspector Class | Qt 5.212.0 </title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li>Qt 5.212.0</li>
+<li>QWebInspector</li>
+<li id="buildversion">Qt 5.212.0 Reference Documentation</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#resources">Resources</a></li>
+<li class="level2"><a href="#inspector-configuration-persistence">Inspector configuration persistence</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QWebInspector Class</h1>
+<!-- $$$QWebInspector-brief -->
+<p>The <a href="qwebinspector.html">QWebInspector</a> class allows the placement and control of a <a href="qwebpage.html">QWebPage</a>'s inspector. The inspector can display a page's hierarchy, its loading statistics and the current state of its individual elements. It is mostly used by web developers. <a href="#details">More...</a></p>
+<!-- @@@QWebInspector -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;QWebInspector&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += webkitwidgets</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 4.6</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> </td></tr></table></div><ul>
+<li><a href="qwebinspector-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#QWebInspector">QWebInspector</a></b>(QWidget *<i> parent</i> = Q_NULLPTR)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#dtor.QWebInspector">~QWebInspector</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#event">event</a></b>(QEvent *<i> ev</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebPage * </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#page">page</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#setPage">setPage</a></b>(QWebPage *<i> page</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#sizeHint">sizeHint</a></b>() const</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#closeEvent">closeEvent</a></b>(QCloseEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#hideEvent">hideEvent</a></b>(QHideEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#resizeEvent">resizeEvent</a></b>(QResizeEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qwebinspector.html#showEvent">showEvent</a></b>(QShowEvent *<i> event</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QWebInspector-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qwebinspector.html">QWebInspector</a> class allows the placement and control of a <a href="qwebpage.html">QWebPage</a>'s inspector. The inspector can display a page's hierarchy, its loading statistics and the current state of its individual elements. It is mostly used by web developers.</p>
+<p>The <a href="qwebpage.html">QWebPage</a> to be inspected must be specified using the <a href="qwebinspector.html#setPage">setPage</a>() method.</p>
+<p>A typical use of <a href="qwebinspector.html">QWebInspector</a> follows:</p>
+<pre class="cpp">    <span class="comment">// ...</span>
+    <span class="type"><a href="qwebpage.html">QWebPage</a></span> <span class="operator">*</span>page <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="qwebpage.html">QWebPage</a></span>;
+    <span class="comment">// ...</span>
+
+    <span class="type"><a href="qwebinspector.html#QWebInspector">QWebInspector</a></span> <span class="operator">*</span>inspector <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="qwebinspector.html#QWebInspector">QWebInspector</a></span>;
+    inspector<span class="operator">-</span><span class="operator">&gt;</span>setPage(page);</pre>
+<p>A <a href="qwebinspector.html">QWebInspector</a> can be made visible either programmatically using setVisible(), or by the user through the attached <a href="qwebpage.html">QWebPage</a>'s context menu.</p>
+<p><b>Note: </b>A <a href="qwebinspector.html">QWebInspector</a> will display a blank widget if either:</p><ul>
+<li><a href="qwebinspector.html#page">page</a>() is null</li>
+<li><a href="qwebsettings.html#WebAttribute-enum">QWebSettings::DeveloperExtrasEnabled</a> is false</li>
+</ul>
+<a name="resources"></a>
+<h3 >Resources</h3>
+<p>This class acts mostly as a container and a controller for the inspector. Most of the resources needed by the inspector are owned by the associated <a href="qwebpage.html">QWebPage</a> and are allocated the first time that:</p>
+<ul>
+<li>an element is inspected</li>
+<li>the <a href="qwebinspector.html">QWebInspector</a> is shown.</li>
+</ul>
+<a name="inspector-configuration-persistence"></a>
+<h3 >Inspector configuration persistence</h3>
+<p>The inspector allows the user to configure some options through its user interface (e.g&#x2e; the resource tracking &quot;Always enable&quot; option). The inspector UI is itself a web page and is using HTML local storage to persist those settings. Since the internal <a href="qwebpage.html">QWebPage</a> used by the inspector isn't exposed in the API, the only way to enable those settings to be persisted is currently to enable local storage globally through <a href="qwebsettings.html#globalSettings">QWebSettings::globalSettings</a>().</p>
+</div>
+<p><b>See also </b><a href="qwebsettings.html#localStoragePath">QWebSettings::localStoragePath</a>() and <a href="qwebsettings.html#WebAttribute-enum">QWebSettings::LocalStorageEnabled</a>.</p>
+<!-- @@@QWebInspector -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QWebInspector[overload1]$$$QWebInspectorQWidget* -->
+<h3 class="fn" id="QWebInspector"><a name="QWebInspector"></a>QWebInspector::&#8203;<span class="name">QWebInspector</span>(<span class="type">QWidget</span> *<i> parent</i> = Q_NULLPTR)</h3>
+<p>Constructs an unbound <a href="qwebinspector.html">QWebInspector</a> with <i>parent</i> as its parent.</p>
+<!-- @@@QWebInspector -->
+<!-- $$$~QWebInspector[overload1]$$$~QWebInspector -->
+<h3 class="fn" id="dtor.QWebInspector"><a name="dtor.QWebInspector"></a>QWebInspector::&#8203;<span class="name">~QWebInspector</span>()</h3>
+<p>Destroys the inspector.</p>
+<!-- @@@~QWebInspector -->
+<!-- $$$closeEvent[overload1]$$$closeEventQCloseEvent* -->
+<h3 class="fn" id="closeEvent"><a name="closeEvent"></a><code>[protected] </code><span class="type">void</span> QWebInspector::&#8203;<span class="name">closeEvent</span>(<span class="type">QCloseEvent</span> *<i> event</i>)</h3>
+<!-- @@@closeEvent -->
+<!-- $$$event[overload1]$$$eventQEvent* -->
+<h3 class="fn" id="event"><a name="event"></a><span class="type">bool</span> QWebInspector::&#8203;<span class="name">event</span>(<span class="type">QEvent</span> *<i> ev</i>)</h3>
+<!-- @@@event -->
+<!-- $$$hideEvent[overload1]$$$hideEventQHideEvent* -->
+<h3 class="fn" id="hideEvent"><a name="hideEvent"></a><code>[protected] </code><span class="type">void</span> QWebInspector::&#8203;<span class="name">hideEvent</span>(<span class="type">QHideEvent</span> *<i> event</i>)</h3>
+<!-- @@@hideEvent -->
+<!-- $$$page[overload1]$$$page -->
+<h3 class="fn" id="page"><a name="page"></a><span class="type"><a href="qwebpage.html">QWebPage</a></span> * QWebInspector::&#8203;<span class="name">page</span>() const</h3>
+<p>Returns the inspected <a href="qwebpage.html">QWebPage</a>. If no web page is currently associated, a null pointer is returned.</p>
+<p><b>See also </b><a href="qwebinspector.html#setPage">setPage</a>().</p>
+<!-- @@@page -->
+<!-- $$$resizeEvent[overload1]$$$resizeEventQResizeEvent* -->
+<h3 class="fn" id="resizeEvent"><a name="resizeEvent"></a><code>[protected] </code><span class="type">void</span> QWebInspector::&#8203;<span class="name">resizeEvent</span>(<span class="type">QResizeEvent</span> *<i> event</i>)</h3>
+<!-- @@@resizeEvent -->
+<!-- $$$setPage[overload1]$$$setPageQWebPage* -->
+<h3 class="fn" id="setPage"><a name="setPage"></a><span class="type">void</span> QWebInspector::&#8203;<span class="name">setPage</span>(<span class="type"><a href="qwebpage.html">QWebPage</a></span> *<i> page</i>)</h3>
+<p>Bind this inspector to the <a href="qwebpage.html">QWebPage</a> to be inspected.</p>
+<p><b>Notes:</b></p>
+<ul>
+<li>There can only be one <a href="qwebinspector.html">QWebInspector</a> associated with a <a href="qwebpage.html">QWebPage</a> and vice versa.</li>
+<li>Calling this method with a null <i>page</i> will break the current association, if any.</li>
+<li>If <i>page</i> is already associated to another <a href="qwebinspector.html">QWebInspector</a>, the association will be replaced and the previous <a href="qwebinspector.html">QWebInspector</a> will become unbound</li>
+</ul>
+<p><b>See also </b><a href="qwebinspector.html#page">page</a>().</p>
+<!-- @@@setPage -->
+<!-- $$$showEvent[overload1]$$$showEventQShowEvent* -->
+<h3 class="fn" id="showEvent"><a name="showEvent"></a><code>[protected] </code><span class="type">void</span> QWebInspector::&#8203;<span class="name">showEvent</span>(<span class="type">QShowEvent</span> *<i> event</i>)</h3>
+<!-- @@@showEvent -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn" id="sizeHint"><a name="sizeHint"></a><span class="type">QSize</span> QWebInspector::&#8203;<span class="name">sizeHint</span>() const</h3>
+<!-- @@@sizeHint -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2014 Digia Plc and/or its
+   subsidiaries. Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Digia, Qt and their respective logos are trademarks of Digia Plc     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

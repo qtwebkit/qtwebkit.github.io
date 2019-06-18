@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qwebelement.cpp -->
+  <title>iterator Class | Qt 5.212.0 </title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li>Qt 5.212.0</li>
+<li>iterator</li>
+<li id="buildversion">Qt 5.212.0 Reference Documentation</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">iterator Class</h1>
+<span class="small-subtitle">(<a href="qwebelementcollection-iterator.html">QWebElementCollection::iterator</a>)<br/></span>
+<!-- $$$iterator-brief -->
+<p>The <a href="qwebelementcollection-iterator.html">QWebElementCollection::iterator</a> class provides an STL-style iterator for <a href="qwebelementcollection.html">QWebElementCollection</a>. <a href="#details">More...</a></p>
+<!-- @@@iterator -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;iterator&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += webkitwidgets</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 4.6</td></tr></table></div><ul>
+<li><a href="qwebelementcollection-iterator-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#iterator">iterator</a></b>(const iterator &amp;<i> other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-not-eq">operator!=</a></b>(const iterator &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWebElement </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-2a">operator*</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-2b">operator+</a></b>(int<i> j</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator &amp; </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-2b-2b">operator++</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-2b-2b-2">operator++</a></b>(int)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator &amp; </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-2b-eq">operator+=</a></b>(int<i> j</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-">operator-</a></b>(int<i> j</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator--2">operator-</a></b>(iterator<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator &amp; </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator--">operator--</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator---2">operator--</a></b>(int)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> iterator &amp; </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator--eq">operator-=</a></b>(int<i> j</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-lt">operator&lt;</a></b>(const iterator &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-lt-eq">operator&lt;=</a></b>(const iterator &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-eq-eq">operator==</a></b>(const iterator &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-gt">operator&gt;</a></b>(const iterator &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qwebelementcollection-iterator.html#operator-gt-eq">operator&gt;=</a></b>(const iterator &amp;<i> other</i>) const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$iterator-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qwebelementcollection-iterator.html">QWebElementCollection::iterator</a> class provides an STL-style iterator for <a href="qwebelementcollection.html">QWebElementCollection</a>.</p>
+<p><a href="qwebelementcollection.html">QWebElementCollection</a> provides STL style iterators for fast low-level access to the elements.</p>
+<p><a href="qwebelementcollection-iterator.html">QWebElementCollection::iterator</a> allows you to iterate over a <a href="qwebelementcollection.html">QWebElementCollection</a>.</p>
+</div>
+<!-- @@@iterator -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$iterator[overload1]$$$iteratorconstiterator& -->
+<h3 class="fn" id="iterator"><a name="iterator"></a>iterator::&#8203;<span class="name">iterator</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@iterator -->
+<!-- $$$operator!=[overload1]$$$operator!=constiterator& -->
+<h3 class="fn" id="operator-not-eq"><a name="operator-not-eq"></a><span class="type">bool</span> iterator::&#8203;<span class="name">operator!=</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>) const</h3>
+<p>Returns true if <i>other</i> points to a different element than this; iterator; otherwise returns false.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator-eq-eq">operator==</a>().</p>
+<!-- @@@operator!= -->
+<!-- $$$operator*[overload1]$$$operator* -->
+<h3 class="fn" id="operator-2a"><a name="operator-2a"></a><span class="type"><a href="qwebelement.html">QWebElement</a></span> iterator::&#8203;<span class="name">operator*</span>() const</h3>
+<p>Returns the current element.</p>
+<!-- @@@operator* -->
+<!-- $$$operator+[overload1]$$$operator+int -->
+<h3 class="fn" id="operator-2b"><a name="operator-2b"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> iterator::&#8203;<span class="name">operator+</span>(<span class="type">int</span><i> j</i>) const</h3>
+<p>Returns an iterator to the element at <i>j</i> positions forward from this iterator. If <i>j</i> is negative, the iterator goes backward.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator-">operator-</a>() and <a href="qwebelementcollection-iterator.html#operator-2b-eq">operator+=</a>().</p>
+<!-- @@@operator+ -->
+<!-- $$$operator++[overload1]$$$operator++ -->
+<h3 class="fn" id="operator-2b-2b"><a name="operator-2b-2b"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp; iterator::&#8203;<span class="name">operator++</span>()</h3>
+<p>The prefix ++ operator (<code>++it</code>) advances the iterator to the next element in the collection and returns an iterator to the new current element.</p>
+<p>Calling this function on <a href="qwebelementcollection.html#end">QWebElementCollection::end</a>() leads to undefined results.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator--">operator--</a>().</p>
+<!-- @@@operator++ -->
+<!-- $$$operator++$$$operator++int -->
+<h3 class="fn" id="operator-2b-2b-2"><a name="operator-2b-2b-2"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> iterator::&#8203;<span class="name">operator++</span>(<span class="type">int</span>)</h3>
+<p>This is an overloaded function.</p>
+<p>The postfix ++ operator (<code>it++</code>) advances the iterator to the next element in the collection and returns an iterator to the previously current element.</p>
+<p>Calling this function on <a href="qwebelementcollection.html#end">QWebElementCollection::end</a>() leads to undefined results.</p>
+<!-- @@@operator++ -->
+<!-- $$$operator+=[overload1]$$$operator+=int -->
+<h3 class="fn" id="operator-2b-eq"><a name="operator-2b-eq"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp; iterator::&#8203;<span class="name">operator+=</span>(<span class="type">int</span><i> j</i>)</h3>
+<p>Advances the iterator by <i>j</i> elements. If <i>j</i> is negative, the iterator goes backward.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator--eq">operator-=</a>() and <a href="qwebelementcollection-iterator.html#operator-2b">operator+</a>().</p>
+<!-- @@@operator+= -->
+<!-- $$$operator-[overload1]$$$operator-int -->
+<h3 class="fn" id="operator-"><a name="operator-"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> iterator::&#8203;<span class="name">operator-</span>(<span class="type">int</span><i> j</i>) const</h3>
+<p>Returns an iterator to the element at <i>j</i> positiosn backward from this iterator. If <i>j</i> is negative, the iterator goes forward.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator-2b">operator+</a>() and <a href="qwebelementcollection-iterator.html#operator--eq">operator-=</a>().</p>
+<!-- @@@operator- -->
+<!-- $$$operator-$$$operator-iterator -->
+<h3 class="fn" id="operator--2"><a name="operator--2"></a><span class="type">int</span> iterator::&#8203;<span class="name">operator-</span>(<span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span><i> other</i>) const</h3>
+<p>Returns the number of elements between the item point to by <i>other</i> and the element pointed to by this iterator.</p>
+<!-- @@@operator- -->
+<!-- $$$operator--[overload1]$$$operator-- -->
+<h3 class="fn" id="operator--"><a name="operator--"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp; iterator::&#8203;<span class="name">operator--</span>()</h3>
+<p>The prefix -- operator (<code>--it</code>) makes the preceding element current and returns an iterator to the new current element.</p>
+<p>Calling this function on <a href="qwebelementcollection.html#begin">QWebElementCollection::begin</a>() leads to undefined results.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator-2b-2b">operator++</a>().</p>
+<!-- @@@operator-- -->
+<!-- $$$operator--$$$operator--int -->
+<h3 class="fn" id="operator---2"><a name="operator---2"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> iterator::&#8203;<span class="name">operator--</span>(<span class="type">int</span>)</h3>
+<p>This is an overloaded function.</p>
+<p>The postfix -- operator (<code>it--</code>) makes the preceding element current and returns an iterator to the previously current element.</p>
+<!-- @@@operator-- -->
+<!-- $$$operator-=[overload1]$$$operator-=int -->
+<h3 class="fn" id="operator--eq"><a name="operator--eq"></a><span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp; iterator::&#8203;<span class="name">operator-=</span>(<span class="type">int</span><i> j</i>)</h3>
+<p>Makes the iterator go back by <i>j</i> elements. If <i>j</i> is negative, the iterator goes forward.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator-2b-eq">operator+=</a>() and <a href="qwebelementcollection-iterator.html#operator-">operator-</a>().</p>
+<!-- @@@operator-= -->
+<!-- $$$operator<[overload1]$$$operator<constiterator& -->
+<h3 class="fn" id="operator-lt"><a name="operator-lt"></a><span class="type">bool</span> iterator::&#8203;<span class="name">operator&lt;</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>) const</h3>
+<p>Returns true if the element pointed to by this iterator is less than the element pointed to by the <i>other</i> iterator.</p>
+<!-- @@@operator< -->
+<!-- $$$operator<=[overload1]$$$operator<=constiterator& -->
+<h3 class="fn" id="operator-lt-eq"><a name="operator-lt-eq"></a><span class="type">bool</span> iterator::&#8203;<span class="name">operator&lt;=</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>) const</h3>
+<p>Returns true if the element pointed to by this iterator is less than or equal to the element pointed to by the <i>other</i> iterator.</p>
+<!-- @@@operator<= -->
+<!-- $$$operator==[overload1]$$$operator==constiterator& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> iterator::&#8203;<span class="name">operator==</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>) const</h3>
+<p>Returns true if <i>other</i> points to the same item as this iterator; otherwise returns false.</p>
+<p><b>See also </b><a href="qwebelementcollection-iterator.html#operator-not-eq">operator!=</a>().</p>
+<!-- @@@operator== -->
+<!-- $$$operator>[overload1]$$$operator>constiterator& -->
+<h3 class="fn" id="operator-gt"><a name="operator-gt"></a><span class="type">bool</span> iterator::&#8203;<span class="name">operator&gt;</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>) const</h3>
+<p>Returns true if the element pointed to by this iterator is greater than the element pointed to by the <i>other</i> iterator.</p>
+<!-- @@@operator> -->
+<!-- $$$operator>=[overload1]$$$operator>=constiterator& -->
+<h3 class="fn" id="operator-gt-eq"><a name="operator-gt-eq"></a><span class="type">bool</span> iterator::&#8203;<span class="name">operator&gt;=</span>(const <span class="type"><a href="qwebelementcollection-iterator.html#iterator">iterator</a></span> &amp;<i> other</i>) const</h3>
+<p>Returns true if the element pointed to by this iterator is greater than or equal to the element pointed to by the <i>other</i> iterator.</p>
+<!-- @@@operator>= -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2014 Digia Plc and/or its
+   subsidiaries. Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Digia, Qt and their respective logos are trademarks of Digia Plc     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
